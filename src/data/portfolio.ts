@@ -157,7 +157,7 @@ export const certifications = [
 ];
 
 export const stats = {
-  repositories: "60+",
+  repositories: "70+",
   projects: "15+",
   patents: "1",
   certifications: "10+",

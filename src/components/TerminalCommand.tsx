@@ -31,7 +31,7 @@ export default function TerminalCommand({ command, output, delay = 0, className 
                 if (j < output.length) {
                   setDisplayedOutput(output.slice(0, j + 1));
                   j++;
-                  setTimeout(typeOutput, 20);
+                  setTimeout(typeOutput, 15);
                 }
               };
               typeOutput();

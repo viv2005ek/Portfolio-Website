@@ -47,16 +47,26 @@ export default function Contact() {
             Get In Touch
           </h1>
           
-          <div className="max-w-2xl mx-auto">
-            <TerminalCommand 
-              command="./contact_vivek.sh --init" 
-              output="Initializing secure communication channel...
+         <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+  <div className="flex items-center mb-4">
+    <div className="flex space-x-2">
+      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+    </div>
+    <span className="ml-4 text-gray-400 text-sm">VIVEK_OS v2.0</span>
+  </div>
+
+  <TerminalCommand 
+    command="./contact_vivek.sh --init" 
+    output={`Initializing secure communication channel...
 [✓] Encryption protocols active
 [✓] Ready to receive your message
-[✓] Response time: < 24 hours"
-              delay={500}
-            />
-          </div>
+[✓] Response time: < 24 hours`}
+    delay={500}
+  />
+</div>
+
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

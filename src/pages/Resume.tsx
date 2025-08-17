@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, FileText, Award, Code, Briefcase } from 'lucide-react';
+import { Download, FileText, Award, Briefcase } from 'lucide-react';
 import GlassPanel from '../components/GlassPanel';
 import TerminalCommand from '../components/TerminalCommand';
 import { personalInfo, stats } from '../data/portfolio';
@@ -20,15 +20,27 @@ export default function Resume() {
             Resume
           </h1>
           
-          <div className="max-w-2xl mx-auto">
-            <TerminalCommand 
-              command="vivek --resume --stats" 
-              output={`Patent: ${stats.patents} | Projects: ${stats.projects} | Certifications: ${stats.certifications}
+        <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+  {/* Terminal Header */}
+  <div className="flex items-center mb-4">
+    <div className="flex space-x-2">
+      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+    </div>
+    <span className="ml-4 text-gray-400 text-sm">VIVEK_OS v2.0</span>
+  </div>
+
+  {/* Terminal Command */}
+  <TerminalCommand 
+    command="vivek --resume --stats" 
+    output={`Patent: ${stats.patents} | Projects: ${stats.projects} | Certifications: ${stats.certifications}
 CGPA: ${personalInfo.cgpa}/10 | Dean's List: ${stats.deansListSemesters}x
 Status: Ready for new challenges 🚀`}
-              delay={500}
-            />
-          </div>
+    delay={500}
+  />
+</div>
+
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

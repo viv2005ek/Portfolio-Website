@@ -19,13 +19,23 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00f7ff] to-[#ff00f7] bg-clip-text text-transparent">
             About Me
           </h1>
-          <div className="max-w-2xl mx-auto">
-            <TerminalCommand 
-              command="cat ~/about.txt" 
-              output={personalInfo.bio}
-              delay={500}
-            />
-          </div>
+        <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+  <div className="flex items-center mb-4">
+    <div className="flex space-x-2">
+      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+    </div>
+    <span className="ml-4 text-gray-400 text-sm">VIVEK_OS v2.0</span>
+  </div>
+
+  <TerminalCommand 
+    command="cat ~/about.txt" 
+    output={personalInfo.bio}
+    delay={500}
+  />
+</div>
+
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -74,7 +84,7 @@ export default function About() {
                 { label: "Patents", value: "1" },
                 { label: "Dean's List", value: "3x" },
                 { label: "Certifications", value: "10+" },
-                { label: "GitHub Repos", value: "60+" },
+                { label: "GitHub Repos", value: "70+" },
                 { label: "LinkedIn Followers", value: "2.3k+" }
               ].map((stat, index) => (
                 <motion.div
@@ -128,7 +138,28 @@ export default function About() {
             ))}
           </div>
         </GlassPanel>
-
+{/* Achievements */}
+        <GlassPanel glowColor="#00f7ff">
+          <div className="flex items-center mb-6">
+            <Award className="w-8 h-8 text-[#00f7ff] mr-3" />
+            <h2 className="text-2xl font-bold text-[#00f7ff]">Achievements</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {achievements.map((achievement, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start space-x-3 p-3 bg-black/20 rounded-lg border border-white/10"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 + 0.5 }}
+              >
+                <div className="w-2 h-2 rounded-full bg-[#00f7ff] mt-2 flex-shrink-0" />
+                <p className="text-gray-300 text-sm">{achievement}</p>
+              </motion.div>
+            ))}
+          </div>
+        </GlassPanel>
         {/* Leadership & Community */}
         <GlassPanel className="mb-8" glowColor="#ff00f7">
           <div className="flex items-center mb-6">
@@ -153,28 +184,7 @@ export default function About() {
           </div>
         </GlassPanel>
 
-        {/* Achievements */}
-        <GlassPanel glowColor="#00f7ff">
-          <div className="flex items-center mb-6">
-            <Award className="w-8 h-8 text-[#00f7ff] mr-3" />
-            <h2 className="text-2xl font-bold text-[#00f7ff]">Achievements</h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                className="flex items-start space-x-3 p-3 bg-black/20 rounded-lg border border-white/10"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 + 0.5 }}
-              >
-                <div className="w-2 h-2 rounded-full bg-[#00f7ff] mt-2 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">{achievement}</p>
-              </motion.div>
-            ))}
-          </div>
-        </GlassPanel>
+        
       </div>
     </div>
   );

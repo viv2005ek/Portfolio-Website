@@ -30,19 +30,31 @@ export default function Skills() {
             Skills & Expertise
           </h1>
           
-          <div className="max-w-2xl mx-auto">
-            <TerminalCommand 
-              command="./scan_skills.sh --verbose" 
-              output="Scanning technical expertise...
+        <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+  {/* Top bar with buttons and OS name */}
+  <div className="flex items-center mb-4">
+    <div className="flex space-x-2">
+      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+    </div>
+    <span className="ml-4 text-gray-400 text-sm">VIVEK_OS v2.0</span>
+  </div>
+
+  {/* Terminal Command */}
+  <TerminalCommand 
+    command="./scan_skills.sh --verbose" 
+    output={`Scanning technical expertise...
 [✓] Frontend Development: Advanced
 [✓] Backend Systems: Advanced  
 [✓] Blockchain Development: Intermediate+
 [✓] AI/ML Integration: Intermediate
 [✓] Database Design: Advanced
-[✓] DevOps & Tools: Advanced"
-              delay={500}
-            />
-          </div>
+[✓] DevOps & Tools: Advanced`}
+    delay={500}
+  />
+</div>
+
         </motion.div>
 
         {/* Interactive Skill Tree */}

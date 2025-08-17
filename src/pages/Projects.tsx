@@ -20,15 +20,25 @@ export default function Projects() {
             Projects
           </h1>
           
-          <div className="max-w-2xl mx-auto mb-8">
-            <TerminalCommand 
-              command="ls ~/projects --stats" 
-              output={`${stats.repositories} repositories | ${stats.projects} full-stack projects
+        <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+  <div className="flex items-center mb-4">
+    <div className="flex space-x-2">
+      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+    </div>
+    <span className="ml-4 text-gray-400 text-sm">VIVEK_OS v2.0</span>
+  </div>
+
+  <TerminalCommand 
+    command="ls ~/projects --stats" 
+    output={`${stats.repositories} repositories | ${stats.projects} full-stack projects
 Development tools and open-source contributions
 Building the future, one commit at a time`}
-              delay={500}
-            />
-          </div>
+    delay={500}
+  />
+</div>
+
         </motion.div>
 
         {/* Featured Projects */}

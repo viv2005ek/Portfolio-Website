@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Background from './components/Background';
@@ -10,11 +10,22 @@ import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
+      <ScrollToTop />
       <motion.div
         key={location.pathname}
         initial={{ opacity: 0, y: 20 }}
@@ -43,13 +54,10 @@ function App() {
     <Router>
       <div className="relative min-h-screen text-white overflow-x-hidden">
         <Background />
-
-        {/* Navigation should use <Link> from react-router-dom inside it */}
         <Navigation />
-
-<div className='mt-7'>
-        <AnimatedRoutes />
-</div>
+        <div className='mt-7'>
+          <AnimatedRoutes />
+        </div>
         {/* Cyberpunk Grid Overlay */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00f7ff]/5 to-transparent" />
