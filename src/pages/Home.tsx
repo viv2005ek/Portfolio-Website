@@ -31,7 +31,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4 mb-20">
       <div className="max-w-6xl w-full">
         <motion.div
           className="text-center mb-12"
@@ -40,7 +40,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           {/* Terminal Boot Sequence */}
-          <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+          <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto mt-20">
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>

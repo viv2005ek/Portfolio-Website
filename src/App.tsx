@@ -47,8 +47,9 @@ function App() {
         {/* Navigation should use <Link> from react-router-dom inside it */}
         <Navigation />
 
+<div className='mt-7'>
         <AnimatedRoutes />
-
+</div>
         {/* Cyberpunk Grid Overlay */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00f7ff]/5 to-transparent" />
