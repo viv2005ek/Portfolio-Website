@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, FileText, Award, Briefcase } from 'lucide-react';
+import { Download, FileText, Award, Briefcase, ExternalLink } from 'lucide-react';
 import GlassPanel from '../components/GlassPanel';
 import TerminalCommand from '../components/TerminalCommand';
 import { personalInfo, stats } from '../data/portfolio';
@@ -46,54 +46,108 @@ Status: Ready for new challenges 🚀`}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Resume Viewer */}
           <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
+          <motion.div
+  initial={{ opacity: 0, x: -30 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: 0.5 }}
+>
+  <GlassPanel glowColor="#00f7ff">
+    <div className="flex items-center justify-between mb-6 flex-col md:flex-row gap-5">
+      <div className="flex items-center">
+        <FileText className="w-6 h-6 text-[#00f7ff] mr-3" />
+        <h2 className="text-2xl font-bold text-[#00f7ff]">Resume Preview</h2>
+      </div>
+      
+      <div className="flex items-center space-x-4 flex-wrap justify-center gap-2">
+        <a
+          href="/Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 border-2 bg-transparent border-[#00f7ff] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+        >
+          <ExternalLink className="w-4 h-4" />
+          <span>Open in New Tab</span>
+        </a>
+        <a
+          href="/Resume.pdf"
+          download="Vivek_Kumar_Garg_Resume.pdf"
+          className="flex items-center space-x-2 bg-gradient-to-r relative right-2 sm:right-0 from-[#00f7ff] to-[#0fff50] text-black font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+        >
+          <Download className="w-4 h-4" />
+          <span>Download PDF</span>
+        </a>
+      </div>
+    </div>
+    
+    {/* PDF Embed */}
+    <div className="relative w-full h-[600px] bg-black/20 rounded-lg border border-white/10 overflow-hidden hidden md:block">
+  <iframe
+  src="/Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+  className="w-full h-full overflow-hidden"
+  title="Resume PDF"
+  style={{ 
+    border: 'none',
+    overflow: 'hidden',
+    display: 'block' 
+  }}
+/>
+      
+      {/* Fallback message - only shows if PDF fails to load */}
+      <div className="absolute inset-0 flex items-center justify-center bg-black/40 hidden">
+        <div className="text-center">
+          <FileText className="w-16 h-16 text-[#00f7ff] mx-auto mb-4" />
+          <p className="text-white mb-4">Unable to load PDF preview</p>
+          <div className="flex space-x-4 justify-center">
+            <a
+              href="/Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#00f7ff] text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
             >
-              <GlassPanel glowColor="#00f7ff">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center">
-                    <FileText className="w-6 h-6 text-[#00f7ff] mr-3" />
-                    <h2 className="text-2xl font-bold text-[#00f7ff]">Resume Preview</h2>
-                  </div>
-                  
-                  <a
-                    href="/Resume.pdf"
-                    download="Vivek_Kumar_Garg_Resume.pdf"
-                    className="flex items-center space-x-2 bg-gradient-to-r from-[#00f7ff] to-[#0fff50] text-black font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
-                  >
-                    <Download className="w-4 h-4" />
-                    <span>Download PDF</span>
-                  </a>
-                </div>
-                
-                {/* PDF Embed */}
-                <div className="relative w-full h-[600px] bg-black/20 rounded-lg border border-white/10 overflow-hidden">
-                  <iframe
-                    src="/Resume.pdf"
-                    className="w-full h-full"
-                    title="Resume PDF"
-                  />
-                  
-                  {/* Fallback for browsers that don't support PDF embed */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-                    <div className="text-center">
-                      <FileText className="w-16 h-16 text-[#00f7ff] mx-auto mb-4" />
-                      <p className="text-white mb-4">Resume PDF Preview</p>
-                      <a
-                        href="/Resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-[#00f7ff] text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
-                      >
-                        Open in New Tab
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </GlassPanel>
-            </motion.div>
+              Open in New Tab
+            </a>
+            <a
+              href="/Resume.pdf"
+              download
+              className="bg-gradient-to-r from-[#00f7ff] to-[#0fff50] text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+            >
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </GlassPanel>
+</motion.div>
+              {/* Terminal Summary */}
+        <motion.div
+          className="mt-12 max-w-4xl mx-auto hidden lg:block"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.3 }}
+        >
+          <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span className="ml-4 text-gray-400 text-sm">resume_terminal</span>
+            </div>
+            
+            <TerminalCommand 
+              command="cat ~/career_objective.txt" 
+              output="Seeking opportunities to leverage my full-stack development skills,
+startup experience, and passion for AI/Blockchain technologies to build
+innovative solutions that make a real-world impact.
+
+Ready to contribute to cutting-edge projects and grow with a dynamic team.
+Let's build the future together! 🚀"
+              delay={500}
+            />
+          </div>
+        </motion.div>
           </div>
 
           {/* Quick Stats & Actions */}
@@ -188,7 +242,7 @@ Status: Ready for new challenges 🚀`}
                 <div className="space-y-3">
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="block w-full bg-gradient-to-r from-[#00f7ff] to-[#ff00f7] text-black font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity text-center"
+                    className="block w-full bg-gradient-to-r  from-[#00f7ff]  to-[#0a3a3e] text-black font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity text-center"
                   >
                     Email Me
                   </a>
@@ -197,7 +251,7 @@ Status: Ready for new challenges 🚀`}
                     href={personalInfo.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-black/40 border border-[#00f7ff]/40 text-[#00f7ff] font-bold py-3 px-4 rounded-lg hover:bg-black/60 transition-colors text-center"
+                    className="block w-full bg-black/40 border border-[#ff00f7]/40 text-[#ff00f7] font-bold py-3 px-4 rounded-lg hover:bg-black/60 transition-colors text-center"
                   >
                     LinkedIn Profile
                   </a>
@@ -215,10 +269,9 @@ Status: Ready for new challenges 🚀`}
             </motion.div>
           </div>
         </div>
-
-        {/* Terminal Summary */}
+  {/* Terminal Summary */}
         <motion.div
-          className="mt-12 max-w-4xl mx-auto"
+          className="mt-12 max-w-4xl mx-auto block lg:hidden"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3 }}
@@ -245,6 +298,7 @@ Let's build the future together! 🚀"
             />
           </div>
         </motion.div>
+      
       </div>
     </div>
   );

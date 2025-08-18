@@ -101,7 +101,7 @@ export const projects = [
 export const achievements = [
   "2nd Runner-up – Ennovate Ideathon (E-Summit'25)",
   "Top 9 out of 200+ shortlisted teams – Startup Conclave: Pitch-a-Thon",
-  "Dean's List – 3 Consecutive Semesters",
+  "Dean's List – 4 Consecutive Semesters",
   "Student Excellence Award for Patent Contribution",
   "Patent Holder & Pre-incubation of Startup by AIC-MUJ",
   "Finalist – Digigreen National Hackathon"
@@ -165,6 +165,6 @@ export const stats = {
   projects: "15+",
   patents: "1",
   certifications: "10+",
-  deansListSemesters: "3",
+  deansListSemesters: "4",
   followers: "2.3k+"
 };

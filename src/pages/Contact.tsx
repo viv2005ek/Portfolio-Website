@@ -407,7 +407,7 @@ const confirmationResponse = await fetch('https://nodemailer-server-92ud.onrende
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#00f7ff] to-[#ff00f7] text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-[#00f7ff]  to-[#0a3a3e] text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center space-x-2"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
