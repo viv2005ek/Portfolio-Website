@@ -94,7 +94,7 @@ export default function About() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 + 0.5 }}
                 >
-                  <div className="text-2xl font-bold text-[#ff00f7] mb-1">{stat.value}</div>
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-xs text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}

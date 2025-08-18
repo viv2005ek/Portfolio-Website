@@ -55,8 +55,9 @@ export const projects = [
     description: "An AI-powered stock analysis platform featuring AI Text, Voice, and VideoChat to help users learn trading in a risk-free environment. Integrated 9+ software tools, including a payment gateway for premium features.",
     tech: ["AI", "React", "Node.js", "Payment Gateway"],
     links: {
-      website: "#",
-      demo: "#"
+      website: "https://vralytics-tradesmart-riskfree-learnai.netlify.app/",
+      demo: "https://www.youtube.com/watch?v=B5TVuqSOuSg",
+      github: "https://github.com/viv2005ek/VRAlytics-TradeSmart-RiskFree-LearnWithAI"
     },
     featured: true
   },
@@ -66,8 +67,9 @@ export const projects = [
     description: "Developed a decentralized application enabling seamless crypto transactions via QR code scans, phone numbers, or usernames, with an average processing time of under 5 seconds by eliminating the need for lengthy wallet addresses.",
     tech: ["Web3", "Solidity", "React", "Blockchain"],
     links: {
-      website: "#",
-      demo: "#"
+      website: "https://pay-paglu-sepolia-net.vercel.app/",
+      demo: "https://www.youtube.com/watch?v=OcNhNN4h-OA",
+      github:"https://github.com/viv2005ek/PayPaglu---Sepolia-net"
     },
     featured: true
   },
@@ -77,8 +79,9 @@ export const projects = [
     description: "A full-stack sustainability platform featuring 6+ eco-focused modules, including recyclability detection, carbon tracking, and an eco-store, aligned with the principles of Reuse, Recycle, and Reduce.",
     tech: ["React", "Django", "AI", "Sustainability"],
     links: {
-      website: "#",
-      demo: "#"
+      website: "https://green-garv-6zuv.vercel.app/",
+      demo: "https://www.youtube.com/watch?v=Am3PfOpo40Y",
+      github:"https://github.com/viv2005ek/GreenGarv"
     },
     featured: true
   },
@@ -88,7 +91,8 @@ export const projects = [
     description: "Created the GDG MUJ website with responsive UI and accessibility standards in just 2 weeks, leveraging React and 5+ JavaScript libraries. Improved accessibility and responsiveness across 20+ devices/resolutions.",
     tech: ["React", "JavaScript", "Responsive Design"],
     links: {
-      website: "#"
+      website: "https://gdg-muj.netlify.app/",
+      github:"https://github.com/GDSC-Manipal-University-Jaipur/GDG-Website"
     },
     featured: false
   }
@@ -109,8 +113,8 @@ export const skills = {
     { name: "TypeScript", level: 90 },
     { name: "JavaScript", level: 95 },
     { name: "HTML5", level: 98 },
-    { name: "CSS3", level: 92 },
-    { name: "Tailwind", level: 95 }
+    { name: "CSS3", level: 97 },
+    { name: "Tailwind", level: 97 }
   ],
   backend: [
     { name: "Node.js", level: 90 },
@@ -134,7 +138,7 @@ export const skills = {
   databases: [
     { name: "MongoDB", level: 88 },
     { name: "MySQL", level: 85 },
-    { name: "Firebase", level: 80 },
+    { name: "Firebase", level: 75 },
     { name: "Supabase", level: 82 }
   ],
   tools: [
@@ -142,7 +146,7 @@ export const skills = {
     { name: "GitHub", level: 95 },
     { name: "VS Code", level: 98 },
     { name: "Postman", level: 90 },
-    { name: "Figma", level: 85 }
+    { name: "Figma", level: 90 }
   ]
 };
 

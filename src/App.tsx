@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Background from './components/Background';
@@ -9,6 +9,8 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import LoadingScreen from './pages/LoadingScreen';
+import Epic404Page from './pages/Epic404Page';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,8 +43,7 @@ function AnimatedRoutes() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
-          {/* fallback */}
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Epic404Page />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
@@ -50,19 +51,39 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading completion after 3 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
       <div className="relative min-h-screen text-white overflow-x-hidden">
         <Background />
-        <Navigation />
-        <div className='mt-7'>
-          <AnimatedRoutes />
-        </div>
-        {/* Cyberpunk Grid Overlay */}
-        <div className="fixed inset-0 pointer-events-none z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00f7ff]/5 to-transparent" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24px,rgba(0,247,255,0.03)_25px,rgba(0,247,255,0.03)_26px,transparent_27px,transparent_74px,rgba(0,247,255,0.03)_75px,rgba(0,247,255,0.03)_76px,transparent_77px),linear-gradient(rgba(0,247,255,0.03)_50%,transparent_50%)] bg-[size:100px_100px]" />
-        </div>
+        
+        <AnimatePresence>
+          {isLoading ? (
+            <LoadingScreen onLoaded={() => setIsLoading(false)} />
+          ) : (
+            <>
+              <Navigation />
+              <div className='mt-7'>
+                <AnimatedRoutes />
+              </div>
+              {/* Cyberpunk Grid Overlay */}
+              <div className="fixed inset-0 pointer-events-none z-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00f7ff]/5 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24px,rgba(0,247,255,0.03)_25px,rgba(0,247,255,0.03)_26px,transparent_27px,transparent_74px,rgba(0,247,255,0.03)_75px,rgba(0,247,255,0.03)_76px,transparent_77px),linear-gradient(rgba(0,247,255,0.03)_50%,transparent_50%)] bg-[size:100px_100px]" />
+              </div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </Router>
   );
