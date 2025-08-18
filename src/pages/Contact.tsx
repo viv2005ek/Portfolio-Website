@@ -44,17 +44,101 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const formPayload = new FormData();
-      formPayload.append('to', 'viv2005ek@gmail.com');
-      formPayload.append('subject', `New message from ${formData.name}`);
-      formPayload.append('text', `From: ${formData.name} <${formData.email}>\n\n${formData.message}`);
-      formPayload.append('html', `
-        <h2>New message from ${formData.name}</h2>
-        <p><strong>Email:</strong> ${formData.email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${formData.message.replace(/\n/g, '<br>')}</p>
-      `);
-      
+   const formPayload = new FormData();
+formPayload.append('to', 'viv2005ek@gmail.com');
+formPayload.append('subject', `New message from ${formData.name}`);
+formPayload.append('text', `From: ${formData.name} <${formData.email}>\n\n${formData.message}`);
+formPayload.append('html', `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background: linear-gradient(135deg, #00f7ff, #ff00f7);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 0;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .message-container {
+            background: #f8f8f8;
+            border-left: 4px solid #00f7ff;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .label {
+            font-weight: 600;
+            color: #555;
+            display: inline-block;
+            min-width: 80px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+        .highlight {
+            color: #00a8ff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="margin:0;">New Message Received</h1>
+    </div>
+    <div class="content">
+        <div class="info-item">
+            <span class="label">From:</span>
+            <span class="highlight">${formData.name}</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Email:</span>
+            <a href="mailto:${formData.email}" style="color: #00a8ff; text-decoration: none;">${formData.email}</a>
+        </div>
+        
+        <div style="margin-top: 25px;">
+            <h3 style="margin-bottom: 15px; color: #444;">Message Content:</h3>
+            <div class="message-container">
+                ${formData.message.replace(/\n/g, '<br>')}
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This message was sent via your portfolio contact form on ${new Date().toLocaleString()}</p>
+        </div>
+    </div>
+</body>
+</html>
+`);
       formData.attachments.forEach(file => {
         formPayload.append('attachments', file);
       });
