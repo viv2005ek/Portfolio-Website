@@ -532,7 +532,7 @@ const confirmationResponse = await fetch('https://nodemailer-server-92ud.onrende
                     <Github className="w-6 h-6 text-[#0fff50]" />
                     <div>
                       <p className="text-white font-medium">GitHub</p>
-                      <p className="text-gray-400 text-sm">60+ repositories</p>
+                      <p className="text-gray-400 text-sm">70+ repositories</p>
                     </div>
                     <ExternalLink className="w-4 h-4 text-gray-400 ml-auto group-hover:text-[#0fff50] transition-colors" />
                   </a>
