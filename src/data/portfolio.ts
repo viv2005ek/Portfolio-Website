@@ -84,6 +84,26 @@ export const projects = [
     },
     featured: true
   },
+    {
+    title: "IndoMate",
+    subtitle: "Redefining safety, Trust & Local Connections",
+    description: "with indomate, you’re never alone—whether it’s safety through instant sos alerts, building trusted connections, or supporting local businesses, we’re creating a smarter, safer india together.",
+    tech: ["MERN", "OpenMap Api", "Socket.io"],
+    links: {
+    },
+    featured: true
+  },
+  {
+    title: "Portfolio Website",
+    subtitle: "Crafted with Passion and Code",
+    description: "Developed a personal portfolio website to showcase projects, skills, and achievements. Implemented responsive design and optimized performance for better user experience.",
+    tech: ["React", "NodeMailer", "Three.js"],
+    links: {
+      website: "https://vivekfolio-six.vercel.app/",
+      github:"https://github.com/viv2005ek/Portfolio-Website"
+    },
+    featured: false
+  },
   {
     title: "GDG Website",
     subtitle: "Web Dev Co-Lead",
@@ -94,7 +114,30 @@ export const projects = [
       github:"https://github.com/GDSC-Manipal-University-Jaipur/GDG-Website"
     },
     featured: false
-  }
+  },
+ {
+    title: "Auto Execuse Maker",
+    subtitle: "It's not Lying. It's Surviving.",
+    description: "Developed an AI-powered tool to automatically generate excuses for various situations, helping users save time and effort.",
+    tech: ["React", "OpenAI API", "Dappier"],
+    links: {
+      website: "https://auto-execuse-generator.netlify.app/",
+      demo:"https://www.youtube.com/watch?v=RBwa6QMYKfg",
+      github:"https://github.com/viv2005ek/auto-excuser-generator"
+    },
+    featured: false
+  },
+ {
+    title: "Travel Go",
+    subtitle: "Plan Your Trips with Ease",
+    description: "A simple travel planning app that lets users explore destinations and organize trips. Built with HTML, CSS, and JavaScript for a smooth and interactive experience.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    links: {
+      website: "https://travelgovivek.netlify.app/",
+      github:"https://github.com/viv2005ek/TravelGo"
+    },
+    featured: false
+  },
 ];
 
 export const achievements = [
