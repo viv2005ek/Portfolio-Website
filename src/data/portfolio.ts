@@ -43,7 +43,6 @@ export const leadership = [
   { title: "Campus Ambassador", org: "Unstop", duration: "Aug 2025 – Present" },
   { title: "Web Development Co-Lead", org: "GDG MUJ", duration: "Oct 2024 – Present" },
   { title: "Technical Head", org: "International Student Cell (ISC), MUJ", duration: "Oct 2024 – Present" },
-  { title: "Team Head of Web Development", org: "MUJ ACM SIGAI", duration: "Jun 2024 – Sep 2024" },
   { title: "Web Developer", org: "MUJHackX 2.0", duration: "Jun 2024 – Sep 2024" },
   { title: "Contributor", org: "GirlScript Summer of Code (Extended Edition) 2024", duration: "2024" }
 ];

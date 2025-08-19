@@ -71,7 +71,7 @@ Status: Ready for new challenges 🚀`}
         <a
           href="/Resume.pdf"
           download="Vivek_Kumar_Garg_Resume.pdf"
-          className="flex items-center space-x-2 bg-gradient-to-r relative right-2 sm:right-0 from-[#00f7ff] to-[#0fff50] text-black font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+          className="flex items-center space-x-2 bg-gradient-to-r relative right-2 sm:right-0 from-[#00f7ff] to-[#0a3a3e] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
         >
           <Download className="w-4 h-4" />
           <span>Download PDF</span>
@@ -109,7 +109,7 @@ Status: Ready for new challenges 🚀`}
             <a
               href="/Resume.pdf"
               download
-              className="bg-gradient-to-r from-[#00f7ff] to-[#0fff50] text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+              className="bg-gradient-to-r from-[#00f7ff] to-[#00f7ff] text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
             >
               Download PDF
             </a>
@@ -242,7 +242,7 @@ Let's build the future together! 🚀"
                 <div className="space-y-3">
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="block w-full bg-gradient-to-r  from-[#00f7ff]  to-[#0a3a3e] text-black font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity text-center"
+                    className="block w-full bg-gradient-to-r  from-[#00f7ff]  to-[#0a3a3e] text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity text-center"
                   >
                     Email Me
                   </a>

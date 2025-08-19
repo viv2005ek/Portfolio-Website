@@ -47,7 +47,7 @@ export default function Home() {
             className="relative w-32 h-32 mx-auto mb-8"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{  type: 'spring', stiffness: 100 }}
+            transition={{ delay:.5, type: 'spring', stiffness: 100 }}
           >
          <div className="w-full h-full bg-gradient-to-br from-[#00f7ff] via-[#228B22] to-[#006D77] rounded-full p-1 animate-gradient-xy ">
   <div className="w-full h-full bg-[#0a0a12] rounded-full flex items-center justify-center overflow-hidden group transition-all duration-300 hover:scale-95">

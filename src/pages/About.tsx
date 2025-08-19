@@ -170,10 +170,19 @@ export default function About() {
         </GlassPanel>
         {/* Leadership & Community */}
         <GlassPanel className="mb-8" glowColor="#ff00f7">
-          <div className="flex items-center mb-6">
-            <Users className="w-8 h-8 text-[#ff00f7] mr-3" />
-            <h2 className="text-2xl font-bold text-[#ff00f7]">Leadership & Community</h2>
-          </div>
+        <div className="flex items-center justify-between mb-6 flex-wrap gap-5">
+  <div className="flex items-center">
+    <Users className="w-8 h-8 text-[#ff00f7] mr-3" />
+    <h2 className="text-2xl font-bold text-[#ff00f7]">Leadership & Community</h2>
+  </div>
+  <button 
+    onClick={() => window.open("https://www.linkedin.com/in/vivek-kumar-garg-097677280/details/experience/", "_blank")}
+    className="flex items-center gap-1 text-sm bg-[#ff00f7]/20 hover:bg-[#ff00f7]/30 text-[#ff00f7] py-1.5 px-3 rounded-md transition-colors border border-[#ff00f7]/30"
+  >
+    <FolderOpen className="w-4 h-4" />
+    <span>View Experience</span>
+  </button>
+</div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {leadership.map((role, index) => (
