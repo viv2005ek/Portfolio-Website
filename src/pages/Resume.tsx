@@ -58,7 +58,7 @@ Status: Ready for new challenges 🚀`}
         <h2 className="text-2xl font-bold text-[#00f7ff]">Resume Preview</h2>
       </div>
       
-      <div className="flex items-center space-x-4 flex-wrap justify-center gap-2">
+      <div className="flex items-center space-x-4 flex-wrap justify-center gap-4 sm:gap-2">
         <a
           href="/Resume.pdf"
           target="_blank"
@@ -151,7 +151,7 @@ Let's build the future together! 🚀"
           </div>
 
           {/* Quick Stats & Actions */}
-          <div className="space-y-8">
+          <div className="space-y-8 ">
             {/* Key Achievements */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}

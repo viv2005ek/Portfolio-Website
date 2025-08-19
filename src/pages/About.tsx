@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, Users, Code } from 'lucide-react';
+import { GraduationCap, Award, Users, Code, FolderOpen } from 'lucide-react';
 import GlassPanel from '../components/GlassPanel';
 import TerminalCommand from '../components/TerminalCommand';
 import { personalInfo, workExperience, leadership, achievements } from '../data/portfolio';
@@ -140,11 +140,19 @@ export default function About() {
         </GlassPanel>
 {/* Achievements */}
         <GlassPanel glowColor="#00f7ff">
-          <div className="flex items-center mb-6">
-            <Award className="w-8 h-8 text-[#00f7ff] mr-3" />
-            <h2 className="text-2xl font-bold text-[#00f7ff]">Achievements</h2>
-          </div>
-          
+     <div className="flex items-center justify-between mb-6 flex-wrap gap-5 ">
+  <div className="flex items-center">
+    <Award className="w-8 h-8 text-[#00f7ff] mr-3" />
+    <h2 className="text-2xl font-bold text-[#00f7ff]">Achievements</h2>
+  </div>
+  <button 
+    onClick={() => window.open("https://drive.google.com/file/d/1OxJbIATeF6Oo0axCND7jDR2HUN9-_IBU/view?usp=drive_link", "_blank")}
+    className="flex items-center gap-1 text-sm bg-[#00f7ff]/20 hover:bg-[#00f7ff]/30 text-[#00f7ff] py-1.5 px-3 rounded-md transition-colors border border-[#00f7ff]/30"
+  >
+    <FolderOpen className="w-4 h-4" />  {/* Assuming you have a FolderOpen icon */}
+    <span>View Certificates</span>
+  </button>
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {achievements.map((achievement, index) => (
               <motion.div

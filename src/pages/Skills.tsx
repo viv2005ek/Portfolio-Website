@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Smartphone, Server, Wrench, Award } from 'lucide-react';
+import { Code, Database, Smartphone, Server, Wrench, Award, FolderOpen } from 'lucide-react';
 import SkillNode from '../components/SkillNode';
 import GlassPanel from '../components/GlassPanel';
 import TerminalCommand from '../components/TerminalCommand';
@@ -145,10 +145,19 @@ export default function Skills() {
           transition={{ delay: 2 }}
         >
           <GlassPanel glowColor="#00f7ff">
-            <div className="flex items-center mb-6">
-              <Award className="w-6 h-6 text-[#00f7ff] mr-3" />
-              <h3 className="text-xl font-bold text-[#00f7ff]">Certifications & Achievements</h3>
-            </div>
+           <div className="flex items-center justify-between mb-6 flex-wrap gap-5 ">
+  <div className="flex items-center">
+    <Award className="w-6 h-6 text-[#00f7ff] mr-3" />
+    <h3 className="text-xl font-bold text-[#00f7ff]">Certifications & Achievements</h3>
+  </div>
+  <button 
+    onClick={() => window.open("https://drive.google.com/file/d/1XCX82tVBue2GVBska9qBKQocS1IoQhbN/view?usp=drive_link", "_blank")}
+    className="flex items-center gap-1 text-sm bg-[#00f7ff]/20 hover:bg-[#00f7ff]/30 text-[#00f7ff] py-1 px-2.5 rounded-md transition-colors border border-[#00f7ff]/30"
+  >
+    <FolderOpen className="w-4 h-4" />
+    <span>View Certificates</span>
+  </button>
+</div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {certifications.map((cert, index) => (

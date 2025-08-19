@@ -103,8 +103,10 @@ export const achievements = [
   "Top 9 out of 200+ shortlisted teams – Startup Conclave: Pitch-a-Thon",
   "Dean's List – 4 Consecutive Semesters",
   "Student Excellence Award for Patent Contribution",
-  "Patent Holder & Pre-incubation of Startup by AIC-MUJ",
-  "Finalist – Digigreen National Hackathon"
+  "Patent Holder",
+  "  Pre-incubation of Startup by AIC-MUJ",
+  "Finalist – Digigreen National Hackathon",
+  "Explore more achievements on LinkedIn 🚀"
 ];
 
 export const skills = {
@@ -157,7 +159,8 @@ export const certifications = [
   "DSA Lab – CodeChef",
   "Postman API Fundamentals Student Expert – Postman",
   "Database Design, Foundations & Programming (SQL & PL/SQL) – Oracle",
-  "Fundamentals of Agentic AI – Microsoft Learn Student Community"
+  "Fundamentals of Agentic AI – Microsoft Learn Student Community",
+  "Explore more achievements on LinkedIn 🚀"
 ];
 
 export const stats = {

@@ -78,7 +78,7 @@ export default function Home() {
             className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#228B22] via-[#006D77] to-[#000080] bg-clip-text text-transparent"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 1 }}
           >
             {personalInfo.name}
           </motion.h1>
@@ -87,7 +87,7 @@ export default function Home() {
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 1.5 }}
           >
             {personalInfo.title}
           </motion.p>
@@ -97,7 +97,7 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.5 }}
+            transition={{ delay: 2 }}
           >
             {[
               { label: "Projects", value: stats.projects },

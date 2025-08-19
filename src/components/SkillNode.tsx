@@ -14,7 +14,7 @@ export default function SkillNode({ name, level, color = '#00f7ff', delay = 0 }:
       className="relative group cursor-pointer"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, type: 'spring', stiffness: 100 }}
+      transition={{  type: 'spring', stiffness: 100 }}
       whileHover={{ scale: 1.1, rotateZ: 5 }}
     >
       <div 
