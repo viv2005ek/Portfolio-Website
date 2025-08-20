@@ -52,7 +52,7 @@ export const projects = [
     title: "StockAnalyzerApp",
     subtitle: "AI-Powered Stock Learning Tool",
     description: "An AI-powered stock analysis platform featuring AI Text, Voice, and VideoChat to help users learn trading in a risk-free environment. Integrated 9+ software tools, including a payment gateway for premium features.",
-    tech: ["AI", "React", "Node.js", "Payment Gateway"],
+    tech: ["AI", "React", "Supabase", "Payment Gateway"],
     links: {
       website: "https://vralytics-tradesmart-riskfree-learnai.netlify.app/",
       demo: "https://www.youtube.com/watch?v=B5TVuqSOuSg",
@@ -76,7 +76,7 @@ export const projects = [
     title: "GreenGarv",
     subtitle: "Fullstack Sustainability Platform",
     description: "A full-stack sustainability platform featuring 6+ eco-focused modules, including recyclability detection, carbon tracking, and an eco-store, aligned with the principles of Reuse, Recycle, and Reduce.",
-    tech: ["React", "Django", "AI", "Sustainability"],
+    tech: ["React", "Supabase", "AI", "Sustainability"],
     links: {
       website: "https://green-garv-6zuv.vercel.app/",
       demo: "https://www.youtube.com/watch?v=Am3PfOpo40Y",
