@@ -46,29 +46,54 @@ export default function About() {
               <h2 className="text-2xl font-bold text-[#00f7ff]">Education</h2>
             </div>
             
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">{personalInfo.degree}</h3>
-                <p className="text-gray-300 mb-2">{personalInfo.university}</p>
-                <p className="text-gray-400 text-sm mb-4">{personalInfo.duration}</p>
-                
-                {/* CGPA Progress Bar */}
-                <div className="mb-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-300">CGPA</span>
-                    <span className="text-sm text-[#00f7ff] font-bold">{personalInfo.cgpa}/10</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
-                    <motion.div
-                      className="bg-gradient-to-r from-[#00f7ff] to-[#0fff50] h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${(personalInfo.cgpa / 10) * 100}%` }}
-                      transition={{ delay: 1, duration: 1.5 }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+           <div className="space-y-4">
+  <div>
+    <h3 className="text-xl font-semibold text-white mb-2">{personalInfo.degree}</h3>
+    <p className="text-gray-300 mb-2">{personalInfo.university}</p>
+    <p className="text-gray-400 text-sm mb-4">{personalInfo.duration}</p>
+    
+    {/* CGPA Progress Bar */}
+    <div className="mb-4">
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-sm text-gray-300">CGPA</span>
+        <span className="text-sm text-[#00f7ff] font-bold">{personalInfo.cgpa}/10</span>
+      </div>
+      <div className="w-full bg-gray-700 rounded-full h-2">
+        <motion.div
+          className="bg-gradient-to-r from-[#00f7ff] to-[#0fff50] h-2 rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${(personalInfo.cgpa / 10) * 100}%` }}
+          transition={{ delay: 1, duration: 1.5 }}
+        />
+      </div>
+    </div>
+
+    {/* View Transcripts Button */}
+    <div className="mt-6">
+      <a
+        href="https://drive.google.com/file/d/1zBm6yiUU47gTPxz7JyUC7Cl1F47GHINs/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 px-4 py-2 bg-transparent text-white border-2 border-[#00f7ff] font-medium rounded-lg hover:from-[#00d4e6] hover:to-[#0dcc43] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#00f7ff]/20"
+      >
+        <svg 
+          className="w-4 h-4" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+          />
+        </svg>
+        View Transcripts
+      </a>
+    </div>
+  </div>
+</div>
           </GlassPanel>
 
           {/* Quick Stats */}
