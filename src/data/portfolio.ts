@@ -100,6 +100,7 @@ export const projects = [
     tech: ["React", "NodeMailer", "Three.js"],
     links: {
       website: "https://vivekfolio-six.vercel.app/",
+      Demo:"https://www.youtube.com/watch?v=5O5n0G0b6ok",
       github:"https://github.com/viv2005ek/Portfolio-Website"
     },
     featured: false
