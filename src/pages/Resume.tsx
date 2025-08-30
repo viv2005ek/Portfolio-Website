@@ -251,7 +251,7 @@ Let's build the future together! 🚀"
                     href={personalInfo.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-black/40 border border-[#ff00f7]/40 text-[#ff00f7] font-bold py-3 px-4 rounded-lg hover:bg-black/60 transition-colors text-center"
+                    className="block w-full bg-black/40 border border-[#0077B5]/40 text-[#0077B5] font-bold py-3 px-4 rounded-lg hover:bg-black/60 transition-colors text-center"
                   >
                     LinkedIn Profile
                   </a>
@@ -263,6 +263,14 @@ Let's build the future together! 🚀"
                     className="block w-full bg-black/40 border border-[#0fff50]/40 text-[#0fff50] font-bold py-3 px-4 rounded-lg hover:bg-black/60 transition-colors text-center"
                   >
                     GitHub Portfolio
+                  </a>
+                   <a
+                    href={personalInfo.X}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-black/40 border border-[#ec4899]/40 text-[#ec4899] font-bold py-3 px-4 rounded-lg hover:bg-black/60 transition-colors text-center"
+                  >
+                    Twitter Posts
                   </a>
                 </div>
               </GlassPanel>

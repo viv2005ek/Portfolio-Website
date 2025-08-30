@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Paperclip } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Paperclip, Twitter } from 'lucide-react';
 import GlassPanel from '../components/GlassPanel';
 import TerminalCommand from '../components/TerminalCommand';
 import { personalInfo } from '../data/portfolio';
@@ -458,14 +458,14 @@ const confirmationResponse = await fetch('https://nodemailer-server-92ud.onrende
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-[#ff00f7]/20 rounded-lg flex items-center justify-center">
-                      <Mail className="w-5 h-5 text-[#ff00f7]" />
+                    <div className="w-10 h-10 bg-[#0077B5]/20 rounded-lg flex items-center justify-center">
+                      <Mail className="w-5 h-5 text-[#0077B5]" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
                       <a 
                         href={`mailto:${personalInfo.email}`}
-                        className="text-white hover:text-[#ff00f7] transition-colors"
+                        className="text-white hover:text-[#0077B5] transition-colors"
                       >
                         {personalInfo.email}
                       </a>
@@ -473,14 +473,14 @@ const confirmationResponse = await fetch('https://nodemailer-server-92ud.onrende
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-[#ff00f7]/20 rounded-lg flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-[#ff00f7]" />
+                    <div className="w-10 h-10 bg-[#0fff50]/20 rounded-lg flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-[#0fff50]" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Phone</p>
                       <a 
                         href={`tel:${personalInfo.phone}`}
-                        className="text-white hover:text-[#ff00f7] transition-colors"
+                        className="text-white hover:text-[#0fff50] transition-colors"
                       >
                         {personalInfo.phone}
                       </a>
@@ -488,12 +488,12 @@ const confirmationResponse = await fetch('https://nodemailer-server-92ud.onrende
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-[#ff00f7]/20 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-[#ff00f7]" />
+                    <div className="w-10 h-10 bg-[#ec4899]/20 rounded-lg flex items-center justify-center">
+                      <MapPin className="w-5 h-5 text-[#ec4899]" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Location</p>
-                      <p className="text-white">{personalInfo.location}</p>
+                      <p className="text-white hover:text-[#ec4899]">{personalInfo.location}</p>
                     </div>
                   </div>
                 </div>
@@ -506,37 +506,52 @@ const confirmationResponse = await fetch('https://nodemailer-server-92ud.onrende
               transition={{ delay: 0.9 }}
             >
               <GlassPanel glowColor="#0fff50">
-                <h2 className="text-2xl font-bold text-[#0fff50] mb-6">Connect With Me</h2>
+                <h2 className="text-2xl font-bold text-[#ff00f7] mb-6">Connect With Me</h2>
                 
-                <div className="space-y-4">
-                  <a
-                    href={personalInfo.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-3 bg-black/20 rounded-lg border border-white/10 hover:border-[#0fff50]/40 transition-colors group"
-                  >
-                    <Linkedin className="w-6 h-6 text-[#0fff50]" />
-                    <div>
-                      <p className="text-white font-medium">LinkedIn</p>
-                      <p className="text-gray-400 text-sm">{personalInfo.followers} followers</p>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-gray-400 ml-auto group-hover:text-[#0fff50] transition-colors" />
-                  </a>
-                  
-                  <a
-                    href={personalInfo.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-3 bg-black/20 rounded-lg border border-white/10 hover:border-[#0fff50]/40 transition-colors group"
-                  >
-                    <Github className="w-6 h-6 text-[#0fff50]" />
-                    <div>
-                      <p className="text-white font-medium">GitHub</p>
-                      <p className="text-gray-400 text-sm">70+ repositories</p>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-gray-400 ml-auto group-hover:text-[#0fff50] transition-colors" />
-                  </a>
-                </div>
+              <div className="space-y-4">
+  <a
+    href={personalInfo.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-4 p-3 bg-black/20 rounded-lg border border-white/10 hover:border-[#0077B5]/40 transition-colors group"
+  >
+    <Linkedin className="w-6 h-6 text-[#0077B5]" />
+    <div>
+      <p className="text-white font-medium">LinkedIn</p>
+      <p className="text-gray-400 text-sm">{personalInfo.followers} followers</p>
+    </div>
+    <ExternalLink className="w-4 h-4  ml-auto text-[#0077B5] transition-colors" />
+  </a>
+
+  <a
+    href={personalInfo.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-4 p-3 bg-black/20 rounded-lg border border-white/10 hover:border-[#0fff50]/40 transition-colors group"
+  >
+    <Github className="w-6 h-6 text-[#0fff50]" />
+    <div>
+      <p className="text-white font-medium">GitHub</p>
+      <p className="text-gray-400 text-sm">70+ repositories</p>
+    </div>
+    <ExternalLink className="w-4 h-4  ml-auto text-[#0fff50] transition-colors" />
+  </a>
+
+  <a
+    href={personalInfo.X}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-4 p-3 bg-black/20 rounded-lg border border-white/10 hover:border-[#ec4899]/40 transition-colors group"
+  >
+    <Twitter className="w-6 h-6 text-[#ec4899]" />
+    <div>
+      <p className="text-white font-medium">Twitter</p>
+      <p className="text-gray-400 text-sm">Follow me on Twitter or X</p>
+    </div>
+    <ExternalLink className="w-4 h-4  ml-auto text-[#ec4899] transition-colors" />
+  </a>
+</div>
+
               </GlassPanel>
             </motion.div>
 
