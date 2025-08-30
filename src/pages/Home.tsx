@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 import TerminalCommand from '../components/TerminalCommand';
 import NeonCard from '../components/NeonCard';
 import { personalInfo, stats } from '../data/portfolio';
@@ -19,15 +19,15 @@ export default function Home() {
       description: `${stats.followers} followers`,
       icon: Linkedin,
       href: personalInfo.linkedin,
-      glowColor: "#00f7ff"
+      glowColor: "#0077B5"
     },
-    {
-      title: "Portfolio",
-      description: "View all projects",
-      icon: ExternalLink,
-      href: "/",
-      glowColor: "#ff00f7"
-    }
+   {
+  title: "Twitter",
+  description: "Follow me on Twitter or X",
+  icon: Twitter,
+  href: personalInfo.X,
+  glowColor: "#ec4899"
+}
   ];
 
   return (
