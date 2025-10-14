@@ -174,11 +174,13 @@ export const skills = {
     { name: "Solidity", level: 85 },
     { name: "Web3.js", level: 80 },
     { name: "Ethers.js", level: 78 },
+    { name: "Clarity", level: 75 },
     { name: "Smart Contracts", level: 82 }
   ],
   languages: [
-    { name: "Python", level: 90 },
-    { name: "Java", level: 88 },
+    { name: "Python", level: 92 },
+    { name: "Java", level: 90 },
+     { name: "C#", level: 88 },
     { name: "C", level: 85 },
     { name: "SQL", level: 90 }
   ],
