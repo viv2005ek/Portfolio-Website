@@ -34,6 +34,7 @@ export const workExperience = [
     type: "Internship",
     description: [
       "Built a scalable EMS platform projected to reduce elective-related administrative overhead for 10,000+ students",
+      "Led a team to develop an AI-powered Learning Management System (LMS) using a vector database and LLMs, enabling students to resolve their queries through a chatbot aligned with the university curriculum",
       "Collaborated with faculty for real-time feedback and deployment"
     ]
   }
