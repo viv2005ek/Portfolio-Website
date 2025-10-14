@@ -185,6 +185,7 @@ export const skills = {
   databases: [
     { name: "MongoDB", level: 88 },
     { name: "MySQL", level: 85 },
+    { name: "RAG Vector DB", level: 78 },
     { name: "Firebase", level: 75 },
     { name: "Supabase", level: 82 }
   ],
