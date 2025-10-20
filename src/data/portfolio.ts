@@ -157,7 +157,7 @@ export const achievements = [
 export const skills = {
   frontend: [
     { name: "React.js", level: 95 },
-        { name: "WPF - C#", level: 90 },
+    { name: "WPF - XAML", level: 90 },
     { name: "JavaScript", level: 95 },
     { name: "HTML5", level: 98 },
     { name: "CSS3", level: 97 },
