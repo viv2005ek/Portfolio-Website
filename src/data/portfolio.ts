@@ -7,7 +7,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/vivek-kumar-garg-097677280/",
   X:"https://x.com/viv2005ek",
   github: "https://github.com/viv2005ek",
-  followers: "2.3k+",
+  followers: "3k+",
   bio: "Computer Science undergraduate with strong full-stack development skills, leadership experience, startup exposure, with 2+ years of hands-on project and internship experience. Built and deployed scalable web applications; mentored open-source contributors across multiple tech communities.",
   cgpa: 9.46,
   university: "Manipal University Jaipur",
