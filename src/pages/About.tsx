@@ -171,7 +171,7 @@ export default function About() {
     <h2 className="text-2xl font-bold text-[#00f7ff]">Achievements</h2>
   </div>
   <button 
-    onClick={() => window.open("https://drive.google.com/file/d/1OxJbIATeF6Oo0axCND7jDR2HUN9-_IBU/view?usp=drive_link", "_blank")}
+    onClick={() => window.open("https://drive.google.com/file/d/1qHzI6Eo_aQ4wolo-JbrMTemKq81kONbn/view?usp=sharing", "_blank")}
     className="flex items-center gap-1 text-sm bg-[#00f7ff]/20 hover:bg-[#00f7ff]/30 text-[#00f7ff] py-1.5 px-3 rounded-md transition-colors border border-[#00f7ff]/30"
   >
     <FolderOpen className="w-4 h-4" />  {/* Assuming you have a FolderOpen icon */}
@@ -194,7 +194,7 @@ export default function About() {
           </div>
         </GlassPanel>
         {/* Leadership & Community */}
-        <GlassPanel className="mb-8" glowColor="#ff00f7">
+        <GlassPanel className="mb-8 mt-8" glowColor="#ff00f7">
         <div className="flex items-center justify-between mb-6 flex-wrap gap-5">
   <div className="flex items-center">
     <Users className="w-8 h-8 text-[#ff00f7] mr-3" />

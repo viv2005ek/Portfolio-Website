@@ -28,6 +28,18 @@ export const workExperience = [
     ]
   },
   {
+  title: "Software Developer Intern",
+  company: "Cardio Flow Design, Japan",
+  duration: "Oct 2025 – Present",
+  type: "Remote Internship",
+  description: [
+    "Developing a DICOM Viewer in C# with 5+ medical imaging tools for visualization and analysis",
+    "Collaborating with an international cross-cultural team in JST timezone through daily syncs",
+    "Contributing to medical imaging software prototypes and UI optimization"
+  ]
+},
+
+  {
     title: "Software Developer Intern",
     company: "SDC, MUJ",
     duration: "May 2024 – Present",
@@ -37,7 +49,20 @@ export const workExperience = [
       "Led a team to develop an AI-powered Learning Management System (LMS) using a RAG vector database and LLMs, enabling students to resolve their queries through a chatbot aligned with the university curriculum",
       "Collaborated with faculty for real-time feedback and deployment"
     ]
-  }
+  },
+
+  {
+  title: "Freelance Full-Stack Developer",
+  company: "Self-Employed",
+  duration: "2025 – Present",
+  type: "Remote",
+  description: [
+    "Delivered 3+ full-stack web applications including e-commerce and client portfolio platforms",
+    "Collaborated directly with clients to gather requirements, design UI, and deploy scalable solutions",
+    "Built responsive, high-performance applications using React.js, Node.js, Express.js, and PostgreSQL"
+  ]
+},
+
 ];
 
 export const leadership = [
@@ -86,15 +111,32 @@ export const projects = [
     },
     featured: true
   },
+  {
+  title: "DICOM Viewer (WPF)",
+  subtitle: "Lightweight Medical Imaging Application",
+  description:
+    "A cross-platform DICOM image viewer built using C# (WPF) and fo-dicom. Supports DICOM loading, slice navigation, measurements, annotations, and exporting with CT Hounsfield Unit visualization. Designed for radiology learning and medical imaging analysis.",
+  tech: ["C#", "WPF", "fo-dicom", ".NET 6", "Newtonsoft.Json"],
+  links: {
+    live: "",
+    demo:"https://youtu.be/wTvmLghDK9U",
+    github: "https://github.com/viv2005ek/DICOM_Viewer"
+  },
+  featured: true
+},
+
     {
     title: "IndoMate",
     subtitle: "Redefining safety, Trust & Local Connections",
     description: "with indomate, you’re never alone—whether it’s safety through instant sos alerts, building trusted connections, or supporting local businesses, we’re creating a smarter, safer india together.",
     tech: ["MERN", "OpenMap Api", "Socket.io"],
     links: {
+      demo:"https://www.linkedin.com/feed/update/urn:li:activity:7293259665650462720"
     },
-    featured: true
+    featured: false
   },
+
+
   {
     title: "Portfolio Website",
     subtitle: "Crafted with Passion and Code",
@@ -102,7 +144,7 @@ export const projects = [
     tech: ["React", "NodeMailer", "Three.js"],
     links: {
       website: "https://vivekfolio-six.vercel.app/",
-      Demo:"https://www.youtube.com/watch?v=5O5n0G0b6ok",
+      demo:"https://www.youtube.com/watch?v=5O5n0G0b6ok",
       github:"https://github.com/viv2005ek/Portfolio-Website"
     },
     featured: false
@@ -130,6 +172,18 @@ export const projects = [
     },
     featured: false
   },
+   {
+  title: "WaveForm Visualizer",
+  subtitle: "Interactive Digital Line Encoding Simulator",
+  description:
+    "A web-based simulator to visualize digital line encoding techniques like NRZ-L, NRZ-I, Polar RZ, Manchester, and Differential Manchester. Users can input binary data and generate real-time 2D waveform visualizations for learning and analysis.",
+  tech: ["React.js", "TypeScript", "Chart.js"],
+  links: {
+    website: "https://wave-form-visualizer.vercel.app/",
+    github: "https://github.com/viv2005ek/WaveForm-Visualizer"
+  },
+  featured: false
+},
  {
     title: "Travel Go",
     subtitle: "Plan Your Trips with Ease",
@@ -144,13 +198,16 @@ export const projects = [
 ];
 
 export const achievements = [
+  "MujHackX 3.0 Winner",
   "2nd Runner-up – Ennovate Ideathon (E-Summit'25)",
   "Top 9 out of 200+ shortlisted teams – Startup Conclave: Pitch-a-Thon",
   "Dean's List – 4 Consecutive Semesters",
+  
   "Student Excellence Award for Patent Contribution",
   "Patent Holder",
   "  Pre-incubation of Startup by AIC-MUJ",
   "Finalist – Digigreen National Hackathon",
+  "Student Excellence Award for Hackathon Winning",
   "Explore more achievements on LinkedIn 🚀"
 ];
 
@@ -202,9 +259,13 @@ export const skills = {
 };
 
 export const certifications = [
+  "Google AI Essentials - Google ",
+  "Fundamentals of Agentic AI - Microsoft",
+  "Stack Full-Stack Bootcamp - RiseIn",
   "Design and Analysis of Algorithms – NPTEL",
   "Data Structures and Algorithms Using Java – NPTEL",
   "OOP Using Java – GeeksforGeeks",
+  "C# Test Qualified - TestDome",
   "DSA Lab – CodeChef",
   "Postman API Fundamentals Student Expert – Postman",
   "Database Design, Foundations & Programming (SQL & PL/SQL) – Oracle",
@@ -218,5 +279,5 @@ export const stats = {
   patents: "1",
   certifications: "10+",
   deansListSemesters: "4",
-  followers: "2.3k+"
+  followers: "3k+"
 };

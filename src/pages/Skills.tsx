@@ -151,7 +151,7 @@ export default function Skills() {
     <h3 className="text-xl font-bold text-[#00f7ff]">Certifications & Achievements</h3>
   </div>
   <button 
-    onClick={() => window.open("https://drive.google.com/file/d/1XCX82tVBue2GVBska9qBKQocS1IoQhbN/view?usp=drive_link", "_blank")}
+    onClick={() => window.open("https://drive.google.com/file/d/1iAb5FU524ZgMxOR5gbedorL5t2vGzX6F/view?usp=sharing", "_blank")}
     className="flex items-center gap-1 text-sm bg-[#00f7ff]/20 hover:bg-[#00f7ff]/30 text-[#00f7ff] py-1 px-2.5 rounded-md transition-colors border border-[#00f7ff]/30"
   >
     <FolderOpen className="w-4 h-4" />

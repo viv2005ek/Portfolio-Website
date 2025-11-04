@@ -4,6 +4,7 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 import TerminalCommand from '../components/TerminalCommand';
 import NeonCard from '../components/NeonCard';
 import { personalInfo, stats } from '../data/portfolio';
+import MemoriesCarousel from '../components/MemoriesCarousel';
 
 export default function Home() {
   const socialCards = [
@@ -97,7 +98,7 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 1 }}
           >
             {[
               { label: "Projects", value: stats.projects },
@@ -136,7 +137,7 @@ export default function Home() {
             <TerminalCommand 
               command="whoami" 
               output={personalInfo.title}
-              delay={3000}
+              delay={1000}
             />
           </div>
         </motion.div>
@@ -146,14 +147,14 @@ export default function Home() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3, staggerChildren: 0.2 }}
+          transition={{ delay: 1.5, staggerChildren: 0.2 }}
         >
           {socialCards.map((card, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 3 + index * 0.2 }}
+              transition={{ delay: 1.5 + index * 0.2 }}
             >
               <NeonCard
                 title={card.title}
@@ -166,13 +167,15 @@ export default function Home() {
             </motion.div>
           ))}
         </motion.div>
+<div className='sm:flex justify-center hidden'>  <MemoriesCarousel /></div>
+      
 
         {/* Bio Section */}
         <motion.div
           className="mt-12 max-w-4xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 4 }}
+          transition={{ delay: 2 }}
         >
           <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-lg p-6 mb-10">
             <p className="text-gray-300 leading-relaxed text-center">
