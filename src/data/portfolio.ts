@@ -111,6 +111,18 @@ export const projects = [
     },
     featured: true
   },
+   {
+  title: "E-Store",
+  subtitle: "Kids Store E-Commerce Platform",
+  description: "Freelance e-commerce platform for kids store. Clone version - original delivered to client. Full admin panel, product management, secure payments, and responsive design.",
+  tech: ["React", "Supabase", "RazorPay"],
+  links: {
+    website: "https://kid-cloths-webstore.vercel.app/",
+    demo:"",
+    github: "https://github.com/viv2005ek/Fashion-Kid-s-WebStore"
+  },
+  featured: true
+},
   {
   title: "DICOM Viewer (WPF)",
   subtitle: "Lightweight Medical Imaging Application",
@@ -118,12 +130,13 @@ export const projects = [
     "A cross-platform DICOM image viewer built using C# (WPF) and fo-dicom. Supports DICOM loading, slice navigation, measurements, annotations, and exporting with CT Hounsfield Unit visualization. Designed for radiology learning and medical imaging analysis.",
   tech: ["C#", "WPF", "fo-dicom", ".NET 6", "Newtonsoft.Json"],
   links: {
-    live: "",
+    website: "",
     demo:"https://youtu.be/wTvmLghDK9U",
     github: "https://github.com/viv2005ek/DICOM_Viewer"
   },
   featured: true
 },
+
 
     {
     title: "IndoMate",
@@ -146,6 +159,18 @@ export const projects = [
       website: "https://vivekfolio-six.vercel.app/",
       demo:"https://www.youtube.com/watch?v=5O5n0G0b6ok",
       github:"https://github.com/viv2005ek/Portfolio-Website"
+    },
+    featured: false
+  },
+   {
+    title: "Smart Attendance System",
+    subtitle: "Precision Attendance Through Location Intelligence",
+    description: "Built a sophisticated attendance system leveraging GPS technology and geofencing capabilities. Developed intelligent algorithms that calculate location overlap percentages and automatically determine attendance status with faculty oversight features.",
+    tech: ["React", "Firebase"],
+    links: {
+      website: "https://attendance-app-se.vercel.app/",
+      demo:"",
+      github:"https://github.com/viv2005ek/AttendanceAppSE"
     },
     featured: false
   },
