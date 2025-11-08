@@ -277,7 +277,7 @@ const ProjectCard = ({ project, index, hoveredCard, setHoveredCard, isFeatured }
     <motion.div
       initial={{ opacity: 0, y: isFeatured ? 30 : 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * (isFeatured ? 0.2 : 0.1) + (isFeatured ? 0.5 : 1) }}
+      transition={{ delay: index * (isFeatured ? 0.4 : 0.3) }}
       whileHover={{ y: -8 }}
       className="h-full"
     >
