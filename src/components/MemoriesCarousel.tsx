@@ -6,6 +6,7 @@ const MemoriesCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const images = [
+    "/photos/0.jpeg",
     "/photos/1.jpg",
     "/photos/8.jpeg",
     "/photos/2.jpeg",
