@@ -7,6 +7,7 @@ const MemoriesCarousel = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const images = [
     "/photos/1.jpg",
+    "/photos/8.jpeg",
     "/photos/2.jpeg",
     "/photos/3.jpg",
     "/photos/4.jpeg",
