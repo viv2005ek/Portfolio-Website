@@ -159,20 +159,20 @@ export const projects = [
     },
     featured: false
   },
-
-
   {
-    title: "Portfolio Website",
-    subtitle: "Crafted with Passion and Code",
-    description: "Developed a personal portfolio website to showcase projects, skills, and achievements. Implemented responsive design and optimized performance for better user experience.",
-    tech: ["React", "NodeMailer", "Three.js"],
+    title: "GemTax AI",
+    subtitle: "Intelligent Tax and Compliance Agent",
+    description: "Developed GemTax AI on Google AI Studio, an intelligent tax agent using three specialized AI agents to automate financial document processing, provide personalized tax optimization, and perform enterprise compliance checks.",
+    tech: ["React", "Google AI Studio", "Multimodal AI"],
     links: {
-      website: "https://vivekfolio-six.vercel.app/",
-      demo:"https://www.youtube.com/watch?v=5O5n0G0b6ok",
-      github:"https://github.com/viv2005ek/Portfolio-Website"
+      website: "https://gem-tax.lovable.app/",
+      demo:"https://www.youtube.com/watch?v=waZrOxRla6c&feature=youtu.be",
+      github:"https://github.com/viv2005ek/GemTax-AiGenesis"
     },
     featured: false
   },
+
+
    {
     title: "Smart Attendance System",
     subtitle: "Precision Attendance Through Location Intelligence",
@@ -182,6 +182,18 @@ export const projects = [
       website: "https://attendance-app-se.vercel.app/",
       demo:"",
       github:"https://github.com/viv2005ek/AttendanceAppSE"
+    },
+    featured: false
+  },
+    {
+    title: "Portfolio Website",
+    subtitle: "Crafted with Passion and Code",
+    description: "Developed a personal portfolio website to showcase projects, skills, and achievements. Implemented responsive design and optimized performance for better user experience.",
+    tech: ["React", "NodeMailer", "Three.js"],
+    links: {
+      website: "https://vivekfolio-six.vercel.app/",
+      demo:"https://www.youtube.com/watch?v=5O5n0G0b6ok",
+      github:"https://github.com/viv2005ek/Portfolio-Website"
     },
     featured: false
   },
