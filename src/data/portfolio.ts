@@ -75,6 +75,17 @@ export const leadership = [
 ];
 
 export const projects = [
+    {
+    title: "Elective Desk",
+    subtitle: "Scalable Elective Management System for University Operations",
+    description: "A high-performance Elective Management System built for 10,000+ students, enabling seamless course selection, role-based access, automated seat allocation, and real-time data management. Designed and deployed in a production environment with robust backend architecture, optimized database workflows, and an intuitive frontend interface.",
+    tech:["React.js", "TypeScript", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL"],
+    links: {
+      website: "https://elective-management-system-latest.vercel.app/login",
+      github: "https://github.com/viv2005ek/ElectiveManagementSystemLatest"
+    },
+    featured: true
+  },
   {
     title: "StockAnalyzerApp",
     subtitle: "AI-Powered Stock Learning Tool",
