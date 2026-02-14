@@ -61,14 +61,14 @@ const MemoriesCarousel = () => {
   }, [isPlaying, imagesLoading]);
 
   // Scroll active thumbnail into view
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      const activeThumb = scrollContainerRef.current.children[currentSlide];
-      if (activeThumb) {
-        activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
-    }
-  }, [currentSlide]);
+  // useEffect(() => {
+  //   if (scrollContainerRef.current) {
+  //     const activeThumb = scrollContainerRef.current.children[currentSlide];
+  //     if (activeThumb) {
+  //       activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  //     }
+  //   }
+  // }, [currentSlide]);
 
   const nextSlide = () => !imagesLoading && setCurrentSlide((prev) => (prev + 1) % images.length);
   const prevSlide = () => !imagesLoading && setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
