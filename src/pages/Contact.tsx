@@ -39,16 +39,18 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-   const formPayload = new FormData();
-formPayload.append('to', 'viv2005ek@gmail.com');
-formPayload.append('subject', `New message from ${formData.name}`);
-formPayload.append('text', `From: ${formData.name} <${formData.email}>\n\n${formData.message}`);
-formPayload.append('html', `
+        const formPayload = new FormData();
+        
+        // Append all form fields
+        formPayload.append('to', 'viv2005ek@gmail.com');
+        formPayload.append('subject', `New message from ${formData.name}`);
+        formPayload.append('text', `From: ${formData.name} <${formData.email}>\n\n${formData.message}`);
+        formPayload.append('html', `
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,23 +141,48 @@ formPayload.append('html', `
 </body>
 </html>
 `);
-      formData.attachments.forEach(file => {
-        formPayload.append('attachments', file);
-      });
 
-      // Send to your API
-      const response = await fetch('https://nodemailer-server-92ud.onrender.com/send-email', {
-        method: 'POST',
-        body: formPayload
-      });
+        // Append files - IMPORTANT: Use the same field name 'attachments'
+        if (formData.attachments && formData.attachments.length > 0) {
+            formData.attachments.forEach((file) => {
+                formPayload.append('attachments', file);
+            });
+            console.log(`Appended ${formData.attachments.length} files`);
+        }
 
-      if (!response.ok) throw new Error('Failed to send message 1');
-      
-      // Send confirmation email
-const confirmPayload = new FormData();
-confirmPayload.append('to', formData.email);
-confirmPayload.append('subject', 'Thank you for your message!');
-confirmPayload.append('html', `
+        // Log FormData contents (for debugging)
+        // console.log('Sending FormData with fields:');
+        // for (let pair of formPayload.entries()) {
+        //     if (pair[0] === 'attachments') {
+        //         // console.log(pair[0], ':', pair[1].name, 'size:', pair[1].size);
+        //     } else {
+        //         // console.log(pair[0], ':', pair[1]);
+        //     }
+        // }
+
+        // Send to your API with explicit fetch options
+        const response = await fetch('https://node-mailer-server-chi.vercel.app/send-email', {
+            method: 'POST',
+            body: formPayload,
+            // Don't set Content-Type header - browser will set it automatically with boundary
+            credentials: 'omit', // Don't send cookies
+            mode: 'cors' // Explicitly set CORS mode
+        });
+
+        // console.log('Response status:', response.status);
+        
+        const data = await response.json();
+        // console.log('Server response:', data);
+
+        if (!response.ok) {
+            throw new Error(data.message || data.error || 'Failed to send message');
+        }
+        
+        // Send confirmation email
+        const confirmPayload = new FormData();
+        confirmPayload.append('to', formData.email);
+        confirmPayload.append('subject', 'Thank you for your message!');
+        confirmPayload.append('html', `
 <!DOCTYPE html>
 <html>
 <head>
@@ -195,23 +222,6 @@ confirmPayload.append('html', `
             gap: 20px;
             margin: 30px 0;
         }
-        .social-link {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #f0f0f0;
-            text-align: center;
-            line-height: 40px;
-            transition: all 0.3s ease;
-        }
-        .social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .linkedin { background: #0077b5; color: white; }
-        .github { background: #333; color: white; }
-        .portfolio { background: linear-gradient(135deg, #00f7ff, #ff00f7); color: white; }
         .footer {
             margin-top: 30px;
             text-align: center;
@@ -230,27 +240,22 @@ confirmPayload.append('html', `
         
         <blockquote>${formData.message}</blockquote>
         
-        <div style="text-align:center; margin-top:30px; font-family:Arial, sans-serif;">
-  <h3 style="font-size:22px; color:#00f7ff; margin-bottom:15px; letter-spacing:1px;">
-    You can connect with me too 🚀
-  </h3>
-  
-  <div class="social-links" style="display:flex; justify-content:center; gap:15px;">
-    <a href="https://www.linkedin.com/in/vivek-kumar-garg-097677280/" target="_blank" 
-       style="text-decoration:none; padding:10px 15px; border-radius:8px; background:#0077b5; color:white; font-weight:bold; transition:0.3s;">
-       in
-    </a>
-    <a href="https://github.com/viv2005ek" target="_blank" 
-       style="text-decoration:none; padding:10px 15px; border-radius:8px; background:#333; color:white; font-weight:bold; transition:0.3s;">
-       gh
-    </a>
-    <a href="https://vivekfolio-six.vercel.app/" target="_blank" 
-       style="text-decoration:none; padding:10px 15px; border-radius:8px; background:#00f7ff; color:black; font-weight:bold; transition:0.3s;">
-       VG
-    </a>
-  </div>
-</div>
-
+        <div style="text-align:center; margin-top:30px;">
+            <h3 style="font-size:22px; color:#00f7ff; margin-bottom:15px; letter-spacing:1px;">
+                Connect with me:
+            </h3>
+            
+            <div style="display:flex; justify-content:center; gap:15px;">
+                <a href="https://www.linkedin.com/in/vivek-kumar-garg-097677280/" target="_blank" 
+                   style="text-decoration:none; padding:10px 20px; border-radius:5px; background:#0077b5; color:white; font-weight:bold;">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/viv2005ek" target="_blank" 
+                   style="text-decoration:none; padding:10px 20px; border-radius:5px; background:#333; color:white; font-weight:bold;">
+                    GitHub
+                </a>
+            </div>
+        </div>
         
         <p>Best regards,<br>Vivek Kumar Garg</p>
         
@@ -262,23 +267,26 @@ confirmPayload.append('html', `
 </html>
 `);
 
-const confirmationResponse = await fetch('https://nodemailer-server-92ud.onrender.com/send-email', {
-  method: 'POST',
-  body: confirmPayload
-});
+        const confirmResponse = await fetch('https://node-mailer-server-chi.vercel.app/send-email', {
+            method: 'POST',
+            body: confirmPayload,
+            mode: 'cors'
+        });
 
+        if (!confirmResponse.ok) {
+            console.warn('Confirmation email may not have sent');
+        }
 
-      if (!confirmationResponse.ok) throw new Error('Failed to send confirmation 2');
-
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '', attachments: [] });
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '', attachments: [] });
+        
     } catch (error) {
-      console.error('Error:', error);
-      alert('Failed to send message. Please try again.');
+        console.error('Frontend Error:', error);
+        alert(error instanceof Error ? error.message : 'Failed to send message. Please check console for details.');
     } finally {
-      setIsSubmitting(false);
+        setIsSubmitting(false);
     }
-  };
+};
 
   return (
     <div className="min-h-screen py-20 px-4">
