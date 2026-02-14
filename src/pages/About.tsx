@@ -71,7 +71,7 @@ export default function About() {
     {/* View Transcripts Button */}
     <div className="mt-6">
       <a
-        href="https://drive.google.com/file/d/1zBm6yiUU47gTPxz7JyUC7Cl1F47GHINs/view"
+        href="https://drive.google.com/file/d/1JlMZRyTEPTzspPl5ULSLkA5BTRKOVp1s/view"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 px-4 py-2 bg-transparent text-white border-2 border-[#00f7ff] font-medium rounded-lg hover:from-[#00d4e6] hover:to-[#0dcc43] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#00f7ff]/20"
@@ -105,12 +105,12 @@ export default function About() {
             
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Projects", value: "15+" },
+                { label: "Projects", value: "20+" },
                 { label: "Patents", value: "1" },
-                { label: "Dean's List", value: "3x" },
-                { label: "Certifications", value: "10+" },
+                { label: "Dean's List", value: "5x" },
+                { label: "Certifications", value: "30+" },
                 { label: "GitHub Repos", value: "70+" },
-                { label: "LinkedIn Followers", value: "2.3k+" }
+                { label: "LinkedIn Followers", value: "3k+" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -171,7 +171,7 @@ export default function About() {
     <h2 className="text-2xl font-bold text-[#00f7ff]">Achievements</h2>
   </div>
   <button 
-    onClick={() => window.open("https://drive.google.com/file/d/1qHzI6Eo_aQ4wolo-JbrMTemKq81kONbn/view?usp=sharing", "_blank")}
+    onClick={() => window.open("https://drive.google.com/file/d/1nZCN_J9zYBS3nq2mm2x8MbvWwfTYS66g/view", "_blank")}
     className="flex items-center gap-1 text-sm bg-[#00f7ff]/20 hover:bg-[#00f7ff]/30 text-[#00f7ff] py-1.5 px-3 rounded-md transition-colors border border-[#00f7ff]/30"
   >
     <FolderOpen className="w-4 h-4" />  {/* Assuming you have a FolderOpen icon */}

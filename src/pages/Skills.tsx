@@ -11,8 +11,11 @@ export default function Skills() {
     { title: 'Frontend', icon: Smartphone, skills: skills.frontend, color: '#00f7ff' },
     { title: 'Backend', icon: Server, skills: skills.backend, color: '#ff00f7' },
     { title: 'Blockchain', icon: Code, skills: skills.blockchain, color: '#0fff50' },
+      { title: 'AI / ML', icon: Database, skills: skills.AiMl, color: '#ffaa00' },
     { title: 'Languages', icon: Code, skills: skills.languages, color: '#ffff00' },
     { title: 'Databases', icon: Database, skills: skills.databases, color: '#ff6b6b' },
+      { title: 'DevOps', icon: Wrench, skills: skills.DevOps, color: '#8a2be2' },
+
     { title: 'Tools', icon: Wrench, skills: skills.tools, color: '#4ecdc4' }
   ];
 
@@ -61,7 +64,7 @@ export default function Skills() {
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#00f7ff] mb-8 text-center">Interactive Skill Tree</h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-8 justify-items-center">
             {skillCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="text-center">
                 <motion.div
