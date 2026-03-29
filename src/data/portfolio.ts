@@ -218,7 +218,28 @@ description: "Building a patented SOS security application focused on real-time 
       demo:"https://www.linkedin.com/feed/update/urn:li:activity:7293259665650462720"
     },
     featured: false
-  },{
+  },
+  {
+  title: "Nodely",
+  subtitle: " Visual workflows no code required ",
+  description: "Build, connect, and automate with a modern node‑based editor. Drag‑and‑drop nodes, create sub‑pipelines (blackboxes), connect APIs, run LLMs, and orchestrate complex logic – all without writing code. Features real‑time validation, undo/redo, copy/paste, minimap navigation, dark mode, and a secure FastAPI backend for DAG analysis.",
+  tech: [
+    "React",
+    "AtuoMating",
+    "n8n",
+    "VectorShift",
+    "TailwindCSS",
+    "UI/UX Research",
+    "Prototyping"
+  ],
+  links: {
+    website: "https://nodely-visual-workflows-no-code-req.vercel.app/",
+    demo:"https://www.youtube.com/watch?v=t5dixYjnnSs",
+    github: "https://github.com/viv2005ek/Nodely---Visual-workflows-no-code-required"
+  },
+  featured: false
+},
+  {
   title: "India Health Intelligence Hub",
   subtitle: " UI/UX Designathon Winner",
   description: "Designed and developed a health intelligence dashboard prototype focused on data-driven public health insights, user accessibility, and intuitive workflow systems. Awarded Winner at national-level UI/UX Designathon.",
@@ -235,26 +256,7 @@ description: "Building a patented SOS security application focused on real-time 
   },
   featured: false
 },
-  {
-  title: "Nodely",
-  subtitle: " Visual workflows no code required ",
-  description: "Build, connect, and automate with a modern node‑based editor. Drag‑and‑drop nodes, create sub‑pipelines (blackboxes), connect APIs, run LLMs, and orchestrate complex logic – all without writing code. Features real‑time validation, undo/redo, copy/paste, minimap navigation, dark mode, and a secure FastAPI backend for DAG analysis.",
-  tech: [
-    "React",
-    "AtuoMating",
-    "n8n",
-    "VectorShift"
-    "TailwindCSS",
-    "UI/UX Research",
-    "Prototyping"
-  ],
-  links: {
-    website: "https://nodely-visual-workflows-no-code-req.vercel.app/",
-    demo:"https://www.youtube.com/watch?v=t5dixYjnnSs",
-    github: "https://github.com/viv2005ek/Nodely---Visual-workflows-no-code-required"
-  },
-  featured: false
-},
+  
   {
     title: "Smart Attendance System",
     subtitle: "Precision Attendance Through Location Intelligence",
