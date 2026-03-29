@@ -234,7 +234,28 @@ description: "Building a patented SOS security application focused on real-time 
     github: "https://github.com/viv2005ek/UIUX---CSC-event"
   },
   featured: false
-}, {
+},
+  {
+  title: "Nodely",
+  subtitle: " Visual workflows no code required ",
+  description: "Build, connect, and automate with a modern node‑based editor. Drag‑and‑drop nodes, create sub‑pipelines (blackboxes), connect APIs, run LLMs, and orchestrate complex logic – all without writing code. Features real‑time validation, undo/redo, copy/paste, minimap navigation, dark mode, and a secure FastAPI backend for DAG analysis.",
+  tech: [
+    "React",
+    "AtuoMating",
+    "n8n",
+    "VectorShift"
+    "TailwindCSS",
+    "UI/UX Research",
+    "Prototyping"
+  ],
+  links: {
+    website: "https://nodely-visual-workflows-no-code-req.vercel.app/",
+    demo:"https://www.youtube.com/watch?v=t5dixYjnnSs",
+    github: "https://github.com/viv2005ek/Nodely---Visual-workflows-no-code-required"
+  },
+  featured: false
+},
+  {
     title: "Smart Attendance System",
     subtitle: "Precision Attendance Through Location Intelligence",
     description: "Built a sophisticated attendance system leveraging GPS technology and geofencing capabilities. Developed intelligent algorithms that calculate location overlap percentages and automatically determine attendance status with faculty oversight features.",
