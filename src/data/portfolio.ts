@@ -102,19 +102,7 @@ export const projects = [
     github: "https://github.com/viv2005ek/ThreadAi-RealTimeAiVideoCall"
   },
   featured: true
-},
-    {
-    title: "Elective Desk",
-    subtitle: "Scalable Elective Management System for University Operations",
-    description: "A high-performance Elective Management System built for 10,000+ students, enabling seamless course selection, role-based access, automated seat allocation, and real-time data management. Designed and deployed in a production environment with robust backend architecture, optimized database workflows, and an intuitive frontend interface.",
-    tech:["React.js", "TypeScript", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL"],
-    links: {
-      website: "https://elective-management-system-latest.vercel.app/login",
-      github: "https://github.com/viv2005ek/ElectiveManagementSystemLatest"
-    },
-    featured: true
-  },
-  {
+}, {
   "title": "Slangyy",
   "subtitle": "Style‑Adaptive AI Text Rewriter – Chrome Extension",
   "description": "A Chrome extension that rewrites selected text in different styles using a QLoRA‑fine‑tuned Phi‑3 model. Fine‑tuned with Unsloth on Google Colab (free T4), the adapter (≈50 MB) is served via a Gradio Space on Hugging Face (CPU tier). The extension (Manifest V3) detects text selection, shows a floating UI, and calls the API to rewrite text with a copy button.",
@@ -137,6 +125,18 @@ export const projects = [
   },
   "featured": true
 },
+    {
+    title: "Elective Desk",
+    subtitle: "Scalable Elective Management System for University Operations",
+    description: "A high-performance Elective Management System built for 10,000+ students, enabling seamless course selection, role-based access, automated seat allocation, and real-time data management. Designed and deployed in a production environment with robust backend architecture, optimized database workflows, and an intuitive frontend interface.",
+    tech:["React.js", "TypeScript", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL"],
+    links: {
+      website: "https://elective-management-system-latest.vercel.app/login",
+      github: "https://github.com/viv2005ek/ElectiveManagementSystemLatest"
+    },
+    featured: true
+  },
+ 
   {
     title: "StockAnalyzerApp",
     subtitle: "AI-Powered Stock Learning Tool",
