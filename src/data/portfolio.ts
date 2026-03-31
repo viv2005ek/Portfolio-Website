@@ -117,7 +117,7 @@ export const projects = [
   {
   "title": "Slangyy",
   "subtitle": "Style‑Adaptive AI Text Rewriter – Chrome Extension",
-  "description": "A Chrome extension that rewrites selected text in four styles (professional, slangy, human, grammar‑checked) using a fine‑tuned LLM. The model (microsoft/Phi‑3‑mini‑4k‑instruct) was fine‑tuned with QLoRA (4‑bit quantisation + LoRA) using Unsloth on a free Google Colab T4 GPU. A synthetic dataset of 2500 instruction‑input‑output examples was generated via GPT/Gemini and hosted on Hugging Face Hub. The fine‑tuned adapter (≈50 MB) is served as a free API via a Gradio Space on Hugging Face Spaces (CPU tier). The extension uses Manifest V3 with a content script that detects text selection, shows a floating UI, and calls the API to rewrite text with a copy button. No external dependencies – pure JavaScript, HTML, CSS.",
+  "description": "A Chrome extension that rewrites selected text in four styles (professional, slangy, human, grammar) using a QLoRA‑fine‑tuned Phi‑3 model. Fine‑tuned with Unsloth on Google Colab (free T4), the adapter (≈50 MB) is served via a Gradio Space on Hugging Face (CPU tier). The extension (Manifest V3) detects text selection, shows a floating UI, and calls the API to rewrite text with a copy button.",
   "tech": [
     "Hugging Face Transformers-Spaces-Datasets",
     "PEFT",
