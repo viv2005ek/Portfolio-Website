@@ -5,6 +5,8 @@ import TerminalCommand from '../components/TerminalCommand';
 import NeonCard from '../components/NeonCard';
 import { personalInfo, stats } from '../data/portfolio';
 import MemoriesCarousel from '../components/MemoriesCarousel';
+import { SiHuggingface } from "react-icons/si";
+
 
 export default function Home() {
   const socialCards = [
@@ -21,14 +23,20 @@ export default function Home() {
       icon: Linkedin,
       href: personalInfo.linkedin,
       glowColor: "#0077B5"
+    }, {
+      title: "Hugging Face",
+      description: "Fine Tuning Models & Spaces",
+      icon: SiHuggingface,
+      href: personalInfo.HF,
+      glowColor: "#FFD21E"
     },
-   {
-  title: "Twitter",
-  description: "Follow me on Twitter or X",
-  icon: Twitter,
-  href: personalInfo.X,
-  glowColor: "#ec4899"
-}
+    {
+      title: "Twitter",
+      description: "Follow me on Twitter or X",
+      icon: Twitter,
+      href: personalInfo.X,
+      glowColor: "#ec4899"
+    }
   ];
 
   return (
@@ -41,27 +49,27 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           {/* Terminal Boot Sequence */}
-         
+
 
           {/* Pixel Art Avatar */}
           <motion.div
             className="relative w-32 h-32 mx-auto mb-8"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay:.5, type: 'spring', stiffness: 100 }}
+            transition={{ delay: .5, type: 'spring', stiffness: 100 }}
           >
-         <div className="w-full h-full bg-gradient-to-br from-[#00f7ff] via-[#228B22] to-[#006D77] rounded-full p-1 animate-gradient-xy ">
-  <div className="w-full h-full bg-[#0a0a12] rounded-full flex items-center justify-center overflow-hidden group transition-all duration-300 hover:scale-95">
-    <img 
-      src="/pfp.jpg" 
-      alt="Profile Picture"
-        loading="eager"
-      className="w-full h-full object-cover transition-all duration-500 "
-    />
-    <div className="absolute inset-0 bg-[#00f7ff] opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></div>
-  </div>
-</div>
-            
+            <div className="w-full h-full bg-gradient-to-br from-[#00f7ff] via-[#228B22] to-[#006D77] rounded-full p-1 animate-gradient-xy ">
+              <div className="w-full h-full bg-[#0a0a12] rounded-full flex items-center justify-center overflow-hidden group transition-all duration-300 hover:scale-95">
+                <img
+                  src="/pfp.jpg"
+                  alt="Profile Picture"
+                  loading="eager"
+                  className="w-full h-full object-cover transition-all duration-500 "
+                />
+                <div className="absolute inset-0 bg-[#00f7ff] opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></div>
+              </div>
+            </div>
+
             {/* CRT Scanlines Effect */}
             <div className="absolute inset-0 rounded-full opacity-30 pointer-events-none">
               {Array.from({ length: 8 }, (_, i) => (
@@ -114,7 +122,7 @@ export default function Home() {
               </div>
             ))}
           </motion.div>
-           <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+          <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -123,9 +131,9 @@ export default function Home() {
               </div>
               <span className="ml-4 text-gray-400 text-sm">VIVEK_OS v2.0</span>
             </div>
-            
-            <TerminalCommand 
-              command="./welcome.sh" 
+
+            <TerminalCommand
+              command="./welcome.sh"
               output="Booting VIVEK_OS v2.0...
 [✓] AI_DEV_MODE activated
 [✓] BLOCKCHAIN_MODULE loaded
@@ -133,9 +141,9 @@ export default function Home() {
 [✓] System ready for innovation"
               delay={500}
             />
-            
-            <TerminalCommand 
-              command="whoami" 
+
+            <TerminalCommand
+              command="whoami"
               output={personalInfo.title}
               delay={1000}
             />
@@ -144,7 +152,7 @@ export default function Home() {
 
         {/* Social Cards */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 max-w-sm sm:max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, staggerChildren: 0.2 }}
@@ -167,8 +175,8 @@ export default function Home() {
             </motion.div>
           ))}
         </motion.div>
-<div className='sm:flex justify-center hidden'>  <MemoriesCarousel /></div>
-      
+        <div className='sm:flex justify-center hidden'>  <MemoriesCarousel /></div>
+
 
         {/* Bio Section */}
         <motion.div
