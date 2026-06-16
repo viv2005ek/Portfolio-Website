@@ -99,11 +99,36 @@ export const projects = [
       "TailwindCSS"
     ],
     links: {
+      website:"https://threadai-bharat-aws-genai.vercel.app/",
       demo: "https://youtu.be/ci9qdkgSVss",
       github: "https://github.com/viv2005ek/ThreadAi-RealTimeAiVideoCall"
     },
     featured: true
-  }, {
+  },
+  {
+    title: "Elective Desk",
+    subtitle: "Scalable Elective Management System for University Operations",
+    description: "A high-performance Elective Management System built for 10,000+ students, enabling seamless course selection, role-based access, automated seat allocation, and real-time data management. Designed and deployed in a production environment with robust backend architecture, optimized database workflows, and an intuitive frontend interface.",
+    tech: ["React.js", "TypeScript", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL"],
+    links: {
+      website: "https://elective-management-system-latest.vercel.app/login",
+      github: "https://github.com/viv2005ek/ElectiveManagementSystemLatest"
+    },
+    featured: true
+  },
+  {
+title: "EffortX",
+subtitle: "AI-Powered Developer Reputation & Contribution Verification Platform",
+description: "An AI-powered platform that analyzes GitHub commits and pull requests to measure real engineering impact instead of activity metrics. EffortX generates AI reviews, stores verifiable contribution proofs on Solana, rewards developers with ECOIN, and enables AI access through a multi-model AI Playground. Built with GitHub OAuth, GitHub App integrations, Redis-backed infrastructure, and on-chain verification to create a transparent reputation layer for developers.",
+tech: ["React.js", "TypeScript", "Node.js", "Express.js", "Redis", "Solana", "Anchor", "GitHub OAuth", "GitHub App", "Gemini AI", "Dappier AI"],
+links: {
+website: "https://effort-x-seven.vercel.app/",
+demo:"https://www.youtube.com/watch?v=obsvaDMGX60",
+github: "https://github.com/viv2005ek/EffortX---GitHub-contribution-verification-on-Solana"
+},
+featured: true
+},
+ {
     "title": "Slangyy",
     "subtitle": "Style‑Adaptive AI Text Rewriter – Chrome Extension",
     "description": "A Chrome extension that rewrites selected text in different styles using a QLoRA‑fine‑tuned Phi‑3 model. Fine‑tuned with Unsloth on Google Colab (free T4), the adapter (≈50 MB) is served via a Gradio Space on Hugging Face (CPU tier). The extension (Manifest V3) detects text selection, shows a floating UI, and calls the API to rewrite text with a copy button.",
@@ -127,18 +152,6 @@ export const projects = [
     "featured": true
   },
   {
-    title: "Elective Desk",
-    subtitle: "Scalable Elective Management System for University Operations",
-    description: "A high-performance Elective Management System built for 10,000+ students, enabling seamless course selection, role-based access, automated seat allocation, and real-time data management. Designed and deployed in a production environment with robust backend architecture, optimized database workflows, and an intuitive frontend interface.",
-    tech: ["React.js", "TypeScript", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL"],
-    links: {
-      website: "https://elective-management-system-latest.vercel.app/login",
-      github: "https://github.com/viv2005ek/ElectiveManagementSystemLatest"
-    },
-    featured: true
-  },
-
-  {
     title: "StockAnalyzerApp",
     subtitle: "AI-Powered Stock Learning Tool",
     description: "An AI-powered stock analysis platform featuring AI Text, Voice, and VideoChat to help users learn trading in a risk-free environment. Integrated 9+ software tools, including a payment gateway for premium features.",
@@ -150,18 +163,7 @@ export const projects = [
     },
     featured: true
   },
-  {
-    title: "PayPaglu",
-    subtitle: "Web3 Transaction Dapp",
-    description: "Developed a decentralized application enabling seamless crypto transactions via QR code scans, phone numbers, or usernames, with an average processing time of under 5 seconds by eliminating the need for lengthy wallet addresses.",
-    tech: ["Web3", "Solidity", "React", "Blockchain"],
-    links: {
-      website: "https://pay-paglu-sepolia-net.vercel.app/",
-      demo: "https://www.youtube.com/watch?v=OcNhNN4h-OA",
-      github: "https://github.com/viv2005ek/PayPaglu---Sepolia-net"
-    },
-    featured: true
-  },
+  
 
   {
     title: "E-Store",
@@ -185,7 +187,32 @@ export const projects = [
       github: "https://github.com/viv2005ek/GreenGarv"
     },
     featured: true
-  }, {
+  },{
+    title: "PayPaglu",
+    subtitle: "Web3 Transaction Dapp",
+    description: "Developed a decentralized application enabling seamless crypto transactions via QR code scans, phone numbers, or usernames, with an average processing time of under 5 seconds by eliminating the need for lengthy wallet addresses.",
+    tech: ["Web3", "Solidity", "React", "Blockchain"],
+    links: {
+      website: "https://pay-paglu-sepolia-net.vercel.app/",
+      demo: "https://www.youtube.com/watch?v=OcNhNN4h-OA",
+      github: "https://github.com/viv2005ek/PayPaglu---Sepolia-net"
+    },
+    featured: true
+  },
+  
+  {
+    title: "DICOM Viewer (WPF)",
+    subtitle: "Lightweight Medical Imaging Application (WPF C# XAML)",
+    description:
+      "A cross-platform DICOM image viewer built using C# (WPF) and fo-dicom. Supports DICOM loading, slice navigation, measurements, annotations, and exporting with CT Hounsfield Unit visualization. Designed for radiology learning and medical imaging analysis.",
+    tech: ["C#", "WPF", "fo-dicom", ".NET 6", "Newtonsoft.Json"],
+    links: {
+      website: "",
+      demo: "https://youtu.be/wTvmLghDK9U",
+      github: "https://github.com/viv2005ek/DICOM_Viewer"
+    },
+    featured: true
+  },{
     title: "StreamEngine",
     subtitle: "Electron + C# Large File Streaming Engine",
     description: "Engineered a cross-platform desktop architecture where Electron handles UI and a C# backend performs high-performance disk-based streaming of 1GB+ files. Achieved ~510 MB/s throughput using chunked disk reads without IPC payload transfer.",
@@ -200,19 +227,6 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/viv2005ek/StreamEngine-Electron-Csharp"
-    },
-    featured: true
-  },
-  {
-    title: "DICOM Viewer (WPF)",
-    subtitle: "Lightweight Medical Imaging Application (WPF C# XAML)",
-    description:
-      "A cross-platform DICOM image viewer built using C# (WPF) and fo-dicom. Supports DICOM loading, slice navigation, measurements, annotations, and exporting with CT Hounsfield Unit visualization. Designed for radiology learning and medical imaging analysis.",
-    tech: ["C#", "WPF", "fo-dicom", ".NET 6", "Newtonsoft.Json"],
-    links: {
-      website: "",
-      demo: "https://youtu.be/wTvmLghDK9U",
-      github: "https://github.com/viv2005ek/DICOM_Viewer"
     },
     featured: true
   }, {
@@ -405,6 +419,7 @@ export const achievements = [
   "Winner UI/UX – CyberSpace Hackathon ",
   "Winner 404 Fund Not Found (TechFest MUJ) ",
   "2nd Runner-up – Ennovate Ideathon (E-Summit'25)",
+  
   "Top 9 out of 200+ shortlisted teams – Startup Conclave: Pitch-a-Thon",
   "Patent Holder",
 
