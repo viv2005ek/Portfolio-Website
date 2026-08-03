@@ -19,7 +19,7 @@ export default function NeonCard({
   icon: Icon,
   href,
   className = '',
-  glowColor = '#00f7ff',
+  glowColor = '#d4af37',
   children,
   onClick
 }: NeonCardProps) {
@@ -45,6 +45,7 @@ export default function NeonCard({
       whileTap={{ scale: 0.98 }}
       style={{ perspective: '1000px' }}
       onClick={onClick}
+      data-glow-color={glowColor}
     >
       <div
         className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
@@ -54,7 +55,7 @@ export default function NeonCard({
         }}
       />
 
-      <div className="relative bg-black/40 backdrop-blur-sm border border-gray-800 rounded-lg p-6 group-hover:border-opacity-60 transition-all duration-300"
+      <div className="relative h-full bg-black/40 backdrop-blur-sm border border-gray-800 rounded-lg p-6 group-hover:border-opacity-60 transition-all duration-300 flex flex-col justify-between"
         style={{ borderColor: `${glowColor}40` }}>
 
         {/* Copy button - always visible, matches neon card border color */}
@@ -109,7 +110,7 @@ export default function NeonCard({
 
   if (href) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full">
         {CardContent}
       </a>
     );

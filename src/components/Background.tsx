@@ -8,8 +8,8 @@ function CyberBackground() {
       <Canvas camera={{ position: [0, 0, 25], fov: 75 }}>
         {/* Lights */}
         <ambientLight intensity={0.2} />
-        <pointLight position={[10, 10, 10]} intensity={1} color="#00f7ff" />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff00f7" />
+        <pointLight position={[10, 10, 10]} intensity={1.5} color="#d4af37" />
+        <pointLight position={[-10, -10, -10]} intensity={0.8} color="#FF5349" />
         
         {/* Scene Elements */}
   

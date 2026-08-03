@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Vivek Kumar Garg",
-  title: "Full-Stack Developer | AI/Blockchain Builder | Founder @ IndoMate",
+  title: "Full-Stack Developer | AI Engineer | Blockchain Builder | Founder @ IndoMate",
   email: "viv2005ek@gmail.com",
   phone: "+91 7877485641",
   location: "Jaipur, Rajasthan",
@@ -8,9 +8,11 @@ export const personalInfo = {
   X: "https://x.com/viv2005ek",
   github: "https://github.com/viv2005ek",
   HF: "https://huggingface.co/viv2005ek",
-  followers: "3k+",
+  leetcode: "https://leetcode.com/u/viv2005ek/",
+  devto: "https://dev.to/viv2005ek",
+  followers: "4k+",
   bio: "Computer Science undergraduate with strong full-stack development skills, leadership experience, startup exposure, with 2+ years of hands-on project and internship experience. Built and deployed scalable web applications; mentored open-source contributors across multiple tech communities.",
-  cgpa: 9.37,
+  cgpa: 9.28,
   university: "Manipal University Jaipur",
   degree: "BTech in Computer Science",
   duration: "2023 – Present"
@@ -18,63 +20,68 @@ export const personalInfo = {
 
 export const workExperience = [
   {
-    title: "Startup Founder",
-    company: "IndoMate",
-    duration: "Nov 2024 – Present",
-    type: "Startup",
-    description: [
-      "Building a patented SOS security application aimed at enhancing user safety",
-      "Received pre-incubation approval among 30+ startups from Atal Incubation Centre, MUJ",
-      "Presented solution at 7+ national-level innovation competitions (including AICTE National Round)"
-    ]
-  },
-  {
-    title: "Software Developer Intern",
-    company: "Cardio Flow Design, Japan",
-    duration: "Oct 2025 – Present",
-    type: "Remote Internship",
-    description: [
-      "Developing a DICOM Viewer in C# with 5+ medical imaging tools for visualization and analysis",
-      "Collaborating with an international cross-cultural team in JST timezone through daily syncs",
-      "Contributing to medical imaging software prototypes and UI optimization",
-      "Building real-time GPU-accelerated compute shaders using WebGPU in an Electron.js desktop application, processing 1000+ parallel threads"
-    ]
-  },
-
-  {
-    title: "Software Developer Intern",
-    company: "SDC, MUJ",
-    duration: "May 2024 – Present",
+    title: "Data Engineering Intern",
+    company: "moneyHop, Bangalore | Remote",
+    duration: "May 2026 – Present",
     type: "Internship",
     description: [
-      "Built a scalable EMS platform projected to reduce elective-related administrative overhead for 10,000+ students",
-      "Led a team to develop an AI-powered Learning Management System (LMS) using a RAG vector database and LLMs, enabling students to resolve their queries through a chatbot aligned with the university curriculum",
-      "Collaborated with faculty for real-time feedback and deployment"
+      "Developed 3 internal data platforms: an AI-powered Enterprise SQL Assistant, a Manual and Automated Data Lineage Platform, and an Analytics Reporting System, enabling self-service data querying, data governance, and operational reporting.",
+      "Built scalable backend services using Python, FastAPI, MCP (Model Context Protocol), Gemini API, MySQL, PostgreSQL, SQLAlchemy, JDBC, React, WebSockets, Docker, Google Sheets API, and AWS Lightsail.",
+      "Implemented schema discovery, metadata management, lineage automation, data profiling, and AI-assisted SQL generation that reduced query generation time by 40%."
     ]
   },
-
+  {
+    title: "Software Developer Intern",
+    company: "Cardio Flow Design, Japan | Remote",
+    duration: "Oct 2025 – Mar 2026",
+    type: "Internship",
+    description: [
+      "Delivered a medical imaging desktop application featuring DICOM parsing, real-time image rendering, and cine playback for 500 MB+ high-resolution DICOM datasets (C#, WPF, fo-dicom).",
+      "Implemented diagnostic measurement, annotation tools, image transformations, and report export using a modular service-oriented architecture.",
+      "Built real-time GPU-accelerated compute shaders using WebGPU in an Electron.js desktop application, processing 1000+ parallel threads."
+    ]
+  },
+  {
+    title: "Startup Founder",
+    company: "IndoMate, Jaipur | On-site",
+    duration: "Nov 2024 – Apr 2026",
+    type: "Startup",
+    description: [
+      "Founded a patent-backed, pre-incubated emergency response platform featuring 5+ SOS modules for real-time user safety and incident reporting.",
+      "Presented the product at 7+ national-level innovation competitions, including the AICTE National Innovation Contest, and secured 2nd Runner-up at E-Summit '25 Ideathon while ranking 9th among 600+ teams at Startup Conclave."
+    ]
+  },
+  {
+    title: "Software Engineering Intern",
+    company: "Software Development Center – MUJ, Jaipur | On-site",
+    duration: "May 2024 – May 2026",
+    type: "Internship",
+    description: [
+      "Engineered a full-stack Elective Management System serving 10,000+ students, enabling subject preference management, algorithmic elective allotment, and academic administration.",
+      "Developed scalable backend APIs and responsive frontend modules using React.js, TypeScript, Node.js, Express.js, Prisma ORM, PostgreSQL, Docker, and CI/CD, implementing RBAC and authentication."
+    ]
+  },
   {
     title: "Freelance Full-Stack Developer",
     company: "Self-Employed",
-    duration: "2025 – Present",
+    duration: "Jan 2025 – Present",
     type: "Remote",
     description: [
-      "Delivered 3+ full-stack web applications including e-commerce and client portfolio platforms",
-      "Collaborated directly with clients to gather requirements, design UI, and deploy scalable solutions",
-      "Built responsive, high-performance applications using MERN and other webFrameworks, ensuring cross-browser compatibility and optimal user experience"
+      "Delivered 3+ full-stack web applications, including custom e-commerce platforms and business solutions, managing the complete development lifecycle from requirements gathering to deployment.",
+      "Built responsive, database-driven applications with secure authentication, payment integration, admin dashboards, order management, and REST APIs that processed over 500 successful transactions."
     ]
-  },
-
+  }
 ];
 
 export const leadership = [
-  { title: "Campus Ambassador", org: "Unstop", duration: "Aug 2025 – Present" },
+  { title: "Technical Team Lead", org: "MUJ Oneiros", duration: "Feb 2026 – Mar 2026" },
   { title: "Technical Lead", org: "TechIdeate MUJ 2026", duration: "Jan 2026 – Feb 2026" },
-  { title: "Mentor", org: "GirlScript Summer of Code 2025", duration: "July 2025 – Nov 2025" },
+  { title: "Campus Ambassador", org: "Unstop", duration: "Aug 2025 – Aug 2026" },
   { title: "Web Development Co-Lead", org: "GDG MUJ", duration: "Oct 2024 – Sep 2025" },
-  { title: "Technical Head", org: "International Student Cell (ISC), MUJ", duration: "Oct 2024 – Sep 2025" },
-  { title: "Web Developer", org: "MUJHackX 2.0", duration: "Jun 2024 – Sep 2024" },
+  { title: "Technical Head", org: "International Student Cell (ISC), MUJ", duration: "Oct 2024 – Dec 2025" },
+  { title: "Mentor", org: "GirlScript Summer of Code 2025", duration: "July 2025 – Nov 2025" },
   { title: "Team Head WebDev", org: "MUJ ACM SIGAI Student Chapter", duration: "Jun 2024 - Sep 2024" },
+  { title: "Web Developer", org: "MUJHackX 2.0", duration: "Jun 2024 – Sep 2024" },
   { title: "Contributor", org: "GirlScript Summer of Code (Extended Edition) 2024", duration: "Sep 2024 - Nov 2024" }
 ];
 
@@ -99,9 +106,11 @@ export const projects = [
       "TailwindCSS"
     ],
     links: {
-      website:"https://threadai-bharat-aws-genai.vercel.app/",
+      website: "https://threadai-bharat-aws-genai.vercel.app/",
       demo: "https://youtu.be/ci9qdkgSVss",
-      github: "https://github.com/viv2005ek/ThreadAi-RealTimeAiVideoCall"
+      github: "https://github.com/viv2005ek/ThreadAi-RealTimeAiVideoCall",
+      presentation: "https://drive.google.com/file/d/1j74qSU0fiax_Je0gJxyRurgjA-CeSZgP/view?usp=sharing",
+      customs: [{ name: "Technical Doc", url: "https://docs.google.com/document/d/1Uqi4W7bhbHs56ksUohuj69Ux1aw64ah1xIvUzm2ykf0/edit?usp=sharing" }]
     },
     featured: true
   },
@@ -117,18 +126,21 @@ export const projects = [
     featured: true
   },
   {
-title: "EffortX",
-subtitle: "AI-Powered Developer Reputation & Contribution Verification Platform",
-description: "An AI-powered platform that analyzes GitHub commits and pull requests to measure real engineering impact instead of activity metrics. EffortX generates AI reviews, stores verifiable contribution proofs on Solana, rewards developers with ECOIN, and enables AI access through a multi-model AI Playground. Built with GitHub OAuth, GitHub App integrations, Redis-backed infrastructure, and on-chain verification to create a transparent reputation layer for developers.",
-tech: ["React.js", "TypeScript", "Node.js", "Express.js", "Redis", "Solana", "Anchor", "GitHub OAuth", "GitHub App", "Gemini AI", "Dappier AI"],
-links: {
-website: "https://effort-x-seven.vercel.app/",
-demo:"https://www.youtube.com/watch?v=obsvaDMGX60",
-github: "https://github.com/viv2005ek/EffortX---GitHub-contribution-verification-on-Solana"
-},
-featured: true
-},
- {
+    title: "EffortX",
+    subtitle: "AI-Powered Developer Reputation & Contribution Verification Platform",
+    description: "An AI-powered platform that analyzes GitHub commits and pull requests to measure real engineering impact instead of activity metrics. EffortX generates AI reviews, stores verifiable contribution proofs on Solana, rewards developers with ECOIN, and enables AI access through a multi-model AI Playground. Built with GitHub OAuth, GitHub App integrations, Redis-backed infrastructure, and on-chain verification to create a transparent reputation layer for developers.",
+    tech: ["React.js", "TypeScript", "Node.js", "Express.js", "Redis", "Solana", "Anchor", "GitHub OAuth", "GitHub App", "Gemini AI", "Dappier AI"],
+    links: {
+      website: "https://effort-x-seven.vercel.app/",
+      demo: "https://www.youtube.com/watch?v=obsvaDMGX60",
+      X: "https://x.com/EffortX05",
+      github: "https://github.com/viv2005ek/EffortX---GitHub-contribution-verification-on-Solana",
+      presentation: "https://drive.google.com/file/d/1MF7-03Cyu7L1MSdAE0lbDUr6RnczowOx/view?usp=sharing",
+      customs: [{ name: "Details Document", url: "https://docs.google.com/document/d/1euj_EaTQ9MYlRs-LcdBlGw-yLovbWCClQ0XBH_NFy54/edit?usp=sharing" }]
+    },
+    featured: true
+  },
+  {
     "title": "Slangyy",
     "subtitle": "Style‑Adaptive AI Text Rewriter – Chrome Extension",
     "description": "A Chrome extension that rewrites selected text in different styles using a QLoRA‑fine‑tuned Phi‑3 model. Fine‑tuned with Unsloth on Google Colab (free T4), the adapter (≈50 MB) is served via a Gradio Space on Hugging Face (CPU tier). The extension (Manifest V3) detects text selection, shows a floating UI, and calls the API to rewrite text with a copy button.",
@@ -145,25 +157,39 @@ featured: true
       "Git Xet",
     ],
     "links": {
-      "website": "https://huggingface.co/spaces/viv2005ek/text-rewriter-api-SLANGY",
+
       "demo": "https://youtu.be/qiU4OSuuXTM",
       "github": "https://github.com/viv2005ek/Slangyy-Extension_to_rewrite_in_tones_and_grammerly",
+      customs: [{ name: "HuggingFace Space", url: "https://huggingface.co/spaces/viv2005ek/text-rewriter-api-SLANGY" }]
+
     },
     "featured": true
   },
   {
-    title: "StockAnalyzerApp",
-    subtitle: "AI-Powered Stock Learning Tool",
-    description: "An AI-powered stock analysis platform featuring AI Text, Voice, and VideoChat to help users learn trading in a risk-free environment. Integrated 9+ software tools, including a payment gateway for premium features.",
-    tech: ["AI", "React", "Supabase", "Payment Gateway"],
+    title: "Stock Analyzer App",
+    subtitle: "Interactive Virtual Trading & Financial Analytics",
+    description: "Architected an AI-driven trading education platform, integrating 9+ software tools. Embedded conversational AIs configured to answer user financial queries in natural language in the form of text, AI-supported voice calls, and real-time AI-supported video calls.",
+    tech: ["React", "RevenueCat", "Tavus", "ElevenLabs", "Stripe", "Lingo", "Yahoo Finance API", "Finnhub API", "Dappier AI", "Supabase"],
     links: {
       website: "https://vralytics-tradesmart-riskfree-learnai.netlify.app/",
       demo: "https://www.youtube.com/watch?v=B5TVuqSOuSg",
-      github: "https://github.com/viv2005ek/VRAlytics-TradeSmart-RiskFree-LearnWithAI"
+      github: "https://github.com/viv2005ek/VRAlytics-TradeSmart-RiskFree-LearnWithAI",
+      post: "https://www.linkedin.com/posts/vivek-kumar-garg-097677280_stockmarketrevolution-aifortrading-bolthackathon-activity-7343948591985586179-Tst2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAERxLrMB9ZjxsIyKIhm06sxQqmckV3pfIfQ"
+
     },
     featured: true
   },
-  
+  {
+    title: "Deloitte Capstone Project",
+    subtitle: "AI-Based Career Guidance System",
+    description: "Built a career guidance system focused on generating personalized recommendations using non-traditional inputs such as user preferences, behavioral patterns, and constraints. Worked as part of Team Ignite focusing on practical problem-solving and real-world applicability.",
+    tech: ["AI", "Large Language Models (LLM)", "Recommendation Logic", "User-Centric Design"],
+    links: {
+      customs: [{ name: "Certificate", url: "https://drive.google.com/file/d/1BEHQ8_dcdfzyvKOy1IX5hT0dxMQJ8t2T/view?usp=sharing" }]
+    },
+    featured: true
+  },
+
 
   {
     title: "E-Store",
@@ -187,7 +213,7 @@ featured: true
       github: "https://github.com/viv2005ek/GreenGarv"
     },
     featured: true
-  },{
+  }, {
     title: "PayPaglu",
     subtitle: "Web3 Transaction Dapp",
     description: "Developed a decentralized application enabling seamless crypto transactions via QR code scans, phone numbers, or usernames, with an average processing time of under 5 seconds by eliminating the need for lengthy wallet addresses.",
@@ -195,11 +221,12 @@ featured: true
     links: {
       website: "https://pay-paglu-sepolia-net.vercel.app/",
       demo: "https://www.youtube.com/watch?v=OcNhNN4h-OA",
-      github: "https://github.com/viv2005ek/PayPaglu---Sepolia-net"
+      github: "https://github.com/viv2005ek/PayPaglu---Sepolia-net",
+      post: "https://www.linkedin.com/posts/vivek-kumar-garg-097677280_firstweb3project-morphbuildathon-paypaglu-activity-7355557181242429440-xR7p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAERxLrMB9ZjxsIyKIhm06sxQqmckV3pfIfQ"
     },
     featured: true
   },
-  
+
   {
     title: "DICOM Viewer (WPF)",
     subtitle: "Lightweight Medical Imaging Application (WPF C# XAML)",
@@ -212,7 +239,7 @@ featured: true
       github: "https://github.com/viv2005ek/DICOM_Viewer"
     },
     featured: true
-  },{
+  }, {
     title: "StreamEngine",
     subtitle: "Electron + C# Large File Streaming Engine",
     description: "Engineered a cross-platform desktop architecture where Electron handles UI and a C# backend performs high-performance disk-based streaming of 1GB+ files. Achieved ~510 MB/s throughput using chunked disk reads without IPC payload transfer.",
@@ -253,7 +280,8 @@ featured: true
     description: "Building a patented SOS security application focused on real-time emergency alerts, trusted network verification, and community-driven safety. Secured pre-incubation approval among 30+ startups at Atal Incubation Centre, MUJ, and led development and pitching at 5+ national innovation events.",
     tech: ["MERN", "OpenMap Api", "Socket.io"],
     links: {
-      demo: "https://www.linkedin.com/feed/update/urn:li:activity:7293259665650462720"
+      post: "https://www.linkedin.com/feed/update/urn:li:activity:7293259665650462720"
+
     },
     featured: false
   },
@@ -414,112 +442,166 @@ featured: true
 ];
 
 export const achievements = [
-  "Winner MujHackX 3.0 ",
-  "Winner Technovate Project Expo AI Track ",
-  "Winner UI/UX – CyberSpace Hackathon ",
-  "Winner 404 Fund Not Found (TechFest MUJ) ",
+  "Patent Holder (SOS System & Features - No: 202411079707)",
+  "Pre-incubation of Startup by AIC-MUJ",
+  "Qualified GATE CS 2026 (Score 577, AIR 3839)",
+  "Top-9 Global Finalist NextGenHacks International Hackathon 2026",
+  "Global Finalist USAII Global AI Hackathon 2026",
+  "Winner (1st Place) – Technovate Project Expo (Ranked #1 AI Project across all tracks) 2026",
+  "Winner (1st Place) – UI/UX CyberSpace Hackathon 2026",
+  "Winner (1st Place) – MujHackX 3.0 (Out of 500+ Participants) 2025",
+  "Winner (1st Place) – 404 Fund Not Found (TechFest MUJ) 2026",
+  "Top-10 Finalist – AMD Slingshot AI Innovation Challenge 2026",
+  "National Semi-Finalist – ET-AI Hackathon (The Economic Times) 2026",
+  "National Finalist – DigiGreen National Hackathon (4th Place out of 200+ teams) 2025",
+  "Semi-Finalist – Flipkart GRID 8.0",
+  "Semi-Finalist – Flipkart GRID 7.0",
+  "Semi-Finalist – Smart India Hackathon (SIH)",
   "2nd Runner-up – Ennovate Ideathon (E-Summit'25)",
-  
   "Top 9 out of 200+ shortlisted teams – Startup Conclave: Pitch-a-Thon",
-  "Patent Holder",
-
-  "Student Excellence Award for Patent Contribution",
-  "Dean's List – 4 Consecutive Semesters",
-
-  "  Pre-incubation of Startup by AIC-MUJ",
-
-  "Finalist – Digigreen National Hackathon",
-  "Semi-Finalist Flipkart Grid 7.0", "Semi-Finalist Smart India Hackathon (SIH)",
-  "2nd Runner-up BrandIT 2024 UI/UX Showdown ",
+  "2nd Runner-up – BrandIT 2024 UI/UX Design Showdown",
+  "Student Excellence Award for Patent Contribution (2x Recipient)",
   "Student Excellence Award for Hackathon Winning",
-
-  "Explore more achievements on My LinkedIn 🚀"
+  "Dean's List – 5 Consecutive Semesters",
+  "Explore more achievements on My LinkedIn"
 ];
 
 export const skills = {
-  frontend: [
-    { name: "React.js", level: 95 },
-    { name: "WPF - XAML/C#", level: 90 },
-    { name: "JavaScript", level: 95 },
-    { name: "Electron.js", level: 85 },
-
-    { name: "HTML5", level: 98 },
-    { name: "CSS3", level: 97 },
-    { name: "Tailwind", level: 97 }
+  AiMl: [
+    { name: "GenAI", level: 95 },
+    { name: "RAG Systems", level: 90 },
+    { name: "LangGraph", level: 85 },
+    { name: "MCP (Model Context Protocol)", level: 88 },
+    { name: "LangChain", level: 90 },
+    { name: "Google AI Studio / Gemini", level: 90 },
+    { name: "Pinecone (Vector DB)", level: 88 },
+    { name: "Vector Databases", level: 90 },
+    { name: "Unsloth / QLoRA / PEFT", level: 82 },
+    { name: "TRL", level: 80 },
+    { name: "Prompt Engineering", level: 92 },
+    { name: "LLM APIs", level: 95 },
+    { name: "NLP", level: 80 },
+    { name: "OpenCV", level: 78 },
+    { name: "TensorFlow.js", level: 75 },
+    { name: "Tesseract (OCR)", level: 72 }
   ],
   backend: [
+    { name: "FastAPI", level: 85 },
     { name: "Node.js", level: 90 },
     { name: "Express.js", level: 88 },
-    { name: "LLM API Integration", level: 98 },
-    { name: "Django", level: 85 },
     { name: "TypeScript", level: 90 },
-    { name: "Flask", level: 80 },
-    { name: "FastAPI", level: 75 }
+    { name: "REST APIs", level: 92 },
+    { name: "WebSockets", level: 85 },
+    { name: "LLM API Integration", level: 98 },
+    { name: "Prisma ORM", level: 88 },
+    { name: "SQLAlchemy", level: 85 },
+    { name: "JDBC", level: 82 },
+    { name: "Django", level: 82 },
+    { name: "Flask", level: 80 }
+  ],
+  frontend: [
+    { name: "React.js", level: 95 },
+    { name: "Redux.js", level: 85 },
+    { name: "Tailwind", level: 97 },
+    { name: "WPF - XAML/C#", level: 90 },
+    { name: "Electron.js", level: 85 },
+    { name: "Chrome Extension API", level: 85 },
+    { name: "JavaScript", level: 95 },
+    { name: "HTML5", level: 98 },
+    { name: "CSS3", level: 97 },
+    { name: "Bootstrap", level: 88 },
+    { name: "SCSS / SASS", level: 85 },
+    { name: "EJS", level: 80 },
+    { name: "Handlebars.js", level: 80 }
   ],
   blockchain: [
     { name: "Solidity", level: 85 },
+    { name: "Solana / Anchor", level: 80 },
+    { name: "Smart Contracts", level: 82 },
     { name: "Web3.js", level: 80 },
     { name: "Ethers.js", level: 78 },
+    { name: "Rust", level: 75 },
     { name: "Clarity", level: 75 },
-    { name: "Smart Contracts", level: 82 }
+    { name: "Clarinet", level: 76 }
   ],
   languages: [
+    { name: "TypeScript", level: 92 },
     { name: "Python", level: 92 },
+    { name: "JavaScript", level: 95 },
+    { name: "SQL", level: 90 },
     { name: "Java", level: 90 },
     { name: "C#", level: 88 },
-    { name: "C", level: 85 },
-    { name: "SQL", level: 90 }
-  ], AiMl: [
-    { name: "RAG Systems", level: 85 },
-    { name: "Pinecone (Vector DB)", level: 85 },
-
-    { name: "TensorFlow.js", level: 75 },
-    { name: "Tesseract (OCR)", level: 72 },
-    { name: "Prompt Engineering", level: 88 },
-    { name: "Google AI Studio / Gemini", level: 86 },
-
+    { name: "C", level: 85 }
+  ],
+  dataEngineering: [
+    { name: "Schema Discovery", level: 88 },
+    { name: "Data Lineage", level: 85 },
+    { name: "Metadata Management", level: 85 },
+    { name: "Data Profiling", level: 82 }
   ],
   databases: [
+    { name: "PostgreSQL", level: 90 },
     { name: "MongoDB", level: 88 },
-    { name: "MySQL", level: 85 },
-    { name: "RAG Vector DB", level: 78 },
-    { name: "Firebase", level: 75 },
-    { name: "Supabase", level: 82 }
-  ], DevOps: [
-    { name: "Version Control ", level: 95 },
-    { name: "Docker", level: 85 },
+    { name: "MySQL", level: 88 },
+    { name: "Redis", level: 80 },
+    { name: "Supabase", level: 82 },
+    { name: "Firebase", level: 75 }
+  ],
+  DevOps: [
+    { name: "Docker", level: 88 },
+    { name: "Docker Compose", level: 85 },
+
     { name: "Kubernetes", level: 80 },
     { name: "Git & Github", level: 95 },
-
+    { name: "Version Control", level: 95 },
+    { name: "AWS Lightsail", level: 80 },
+    { name: "Google Cloud IAM", level: 78 }
   ],
   tools: [
-    { name: "Git & Github", level: 95 },
+    { name: "Antigravity", level: 95 },
     { name: "VS Code", level: 98 },
     { name: "Postman", level: 90 },
-    { name: "Figma", level: 90 }
+    { name: "Figma", level: 90 },
+    { name: "Hugging Face", level: 85 },
+    { name: "Vercel / Netlify", level: 88 }
+  ],
+  softSkills: [
+    { name: "Leadership", level: 92 },
+    { name: "Mentoring", level: 94 },
+    { name: "Team Collaboration", level: 95 },
+    { name: "Problem Solving", level: 96 },
+    { name: "Public Speaking", level: 90 }
   ]
 };
 
 export const certifications = [
-  "Google AI Essentials - Google ",
+  "Amazon ML Summer School 2026 - Amazon",
   "Fundamentals of Agentic AI - Microsoft",
+  "Google AI Essentials - Google",
+  "Deloitte Capstone Program 2025 - AI Guidance System",
+  "React & Redux Mastery, Node.js, Express.js & MongoDB Suite – Scaler",
   "Stack Full-Stack Bootcamp - RiseIn",
+  "HPE Career Preview Program (CPP3) 2026",
+  "GirlScript Summer of Code (GSSoC) — Mentor (2025) | Contributor (2024)",
   "Design and Analysis of Algorithms – NPTEL",
   "Data Structures and Algorithms Using Java – NPTEL",
-  "OOP Using Java – GeeksforGeeks",
-  "C# Test Qualified - TestDome",
-  "DSA Lab – CodeChef",
-  "Postman API Fundamentals Student Expert – Postman",
+  "Verified C# and DSA Specialist – TestDome",
   "Database Design, Foundations & Programming (SQL & PL/SQL) – Oracle",
+  "OOP Using Java – GeeksforGeeks",
+  "Postman API Fundamentals Student Expert – Postman",
+  "DSA Lab – CodeChef",
   "Fundamentals of Agentic AI – Microsoft Learn Student Community",
-  "Explore more achievements on LinkedIn 🚀"
+  "Explore more achievements on LinkedIn"
 ];
 
 export const stats = {
-  repositories: "70+",
-  projects: "20+",
-  patents: "1",
-  certifications: "30+",
+  repositories: "120+",
+  projects: "30+",
+  patents: "2",
+  certifications: "35+",
   deansListSemesters: "5",
-  followers: "3k+"
+  followers: "4k+",
+  hackathonsWon: "10+",
+  studentExcellence: "2x",
+  hackathonFinals: "10+"
 };

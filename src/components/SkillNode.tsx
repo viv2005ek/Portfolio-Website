@@ -8,7 +8,7 @@ interface SkillNodeProps {
   delay?: number;
 }
 
-export default function SkillNode({ name, level, color = '#00f7ff', delay = 0 }: SkillNodeProps) {
+export default function SkillNode({ name, level, color = '#d4af37', delay = 0 }: SkillNodeProps) {
   return (
     <motion.div
       className="relative group cursor-pointer"
@@ -25,14 +25,14 @@ export default function SkillNode({ name, level, color = '#00f7ff', delay = 0 }:
         }}
       />
       
-      <div className="relative bg-black/40 backdrop-blur-sm border-2 rounded-full w-24 h-24 flex flex-col items-center justify-center group-hover:bg-black/60 transition-all duration-300"
+      <div className="relative bg-black/40 backdrop-blur-sm border-2 rounded-full w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center group-hover:bg-black/60 transition-all duration-300"
            style={{ borderColor: `${color}60` }}>
         
-        <div className="text-xs font-bold text-center px-2" style={{ color }}>
+        <div className="font-sora text-[10px] md:text-xs font-bold text-center px-1 md:px-2" style={{ color }}>
           {name}
         </div>
         
-        <div className="w-16 h-1 bg-gray-700 rounded-full mt-2 overflow-hidden">
+        <div className="w-12 h-0.5 md:w-16 md:h-1 bg-gray-700 rounded-full mt-1.5 md:mt-2 overflow-hidden">
           <motion.div
             className="h-full rounded-full"
             style={{ backgroundColor: color }}
@@ -42,7 +42,7 @@ export default function SkillNode({ name, level, color = '#00f7ff', delay = 0 }:
           />
         </div>
         
-        <div className="text-xs mt-1 text-gray-400">
+        <div className="font-mono text-[9px] md:text-xs mt-0.5 md:mt-1 text-gray-400">
           {level}%
         </div>
       </div>

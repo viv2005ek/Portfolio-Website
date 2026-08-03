@@ -13,9 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #0a0a12;
@@ -23,9 +21,41 @@ body {
   overflow-x: hidden;
 }
 
-/* Terminal Font */
+/* Futuristic Main Page Titles */
+h1, .font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Futuristic Angular Section Headings */
+h2, .font-oxanium {
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Cybernetic Card Sub-headings & Headers */
+h3, h4, .font-aldrich {
+  font-family: 'Aldrich', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Modern Geometric Tech Font */
+.font-space-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Technical Badges and UI Accent Font */
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+/* Cybernetic Monospace Font */
 .font-mono {
-  font-family: 'VT323', monospace;
+  font-family: 'Share Tech Mono', 'Fira Code', monospace;
 }
 
 /* Modern Custom Scrollbar */
@@ -34,31 +64,31 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(200, 240, 255, 0.2);  /* Light cyan wash (subtle) */
+  background: rgba(212, 175, 55, 0.05);  /* Subtle gold wash */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #006D77 0%, #228B22 100%);  /* Teal → Forest Green */
+  background: linear-gradient(135deg, #d4af37 0%, #FF5349 100%);  /* Gold → Electric Coral */
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);  /* Soft white outline */
+  border: 1px solid rgba(255, 255, 255, 0.15);  /* Soft outline */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #0077CC 0%, #4B0082 100%);  /* Deep Blue → Indigo */
+  background: linear-gradient(135deg, #ffffff 0%, #d4af37 100%);  /* White → Gold */
 }
 
 /* Glow Effects */
 .glow-cyan {
-  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px rgba(212, 175, 55, 0.5), 0 0 30px rgba(255, 83, 73, 0.3);
 }
 
 .glow-pink {
-  text-shadow: 0 0 10px #ff00f7, 0 0 20px #ff00f7, 0 0 30px #ff00f7;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px rgba(212, 175, 55, 0.5);
 }
 
 .glow-green {
-  text-shadow: 0 0 10px #0fff50, 0 0 20px #0fff50, 0 0 30px #0fff50;
+  text-shadow: 0 0 10px #FF5349, 0 0 20px #FF5349, 0 0 30px rgba(255, 83, 73, 0.5);
 }
 
 /* Animations */
@@ -117,7 +147,7 @@ body {
   bottom: 0;
   background: linear-gradient(
     transparent 50%,
-    rgba(0, 247, 255, 0.03) 50%
+    rgba(212, 175, 55, 0.02) 50%
   );
   background-size: 100% 4px;
   pointer-events: none;
@@ -129,7 +159,7 @@ body {
   background: linear-gradient(
     45deg,
     transparent 30%,
-    rgba(0, 247, 255, 0.1) 50%,
+    rgba(212, 175, 55, 0.08) 50%,
     transparent 70%
   );
   background-size: 200% 200%;
@@ -162,21 +192,25 @@ body {
 
 /* Selection */
 ::selection {
-  background: rgba(0, 247, 255, 0.3);
+  background: rgba(212, 175, 55, 0.2);
   color: white;
 }
 
 ::-moz-selection {
-  background: rgba(0, 247, 255, 0.3);
+  background: rgba(212, 175, 55, 0.2);
   color: white;
 }
 
 /* Focus States */
-button:focus,
+button:focus-visible,
 input:focus,
 textarea:focus {
-  outline: 2px solid #00f7ff;
+  outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Loading States */

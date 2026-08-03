@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Cpu, Database, Wifi, Loader2 } from 'lucide-react';
 
 const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
   const [progress, setProgress] = useState(0);
@@ -63,15 +64,6 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent overflow-hidden">
-          <div className="fixed inset-0 pointer-events-none z-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00f7ff]/5 to-transparent" />
-                <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24px,rgba(0,247,255,0.03)_25px,rgba(0,247,255,0.03)_26px,transparent_27px,transparent_74px,rgba(0,247,255,0.03)_75px,rgba(0,247,255,0.03)_76px,transparent_77px),linear-gradient(rgba(0,247,255,0.03)_50%,transparent_50%)] bg-[size:100px_100px]" />
-              </div>
-      {/* Animated background grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.1)_1px,transparent_1px)] bg-[size:20px_20px] animate-grid-move"></div>
-      </div>
-
       {/* Floating particles */}
       {[...Array(12)].map((_, i) => (
         <div
@@ -86,12 +78,12 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
         />
       ))}
 
-      {/* Server visualization - responsive positioning */}
-      <div className="absolute left-4 sm:left-8 md:left-1/4 top-1/2 transform -translate-y-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+      {/* Server visualization - hidden on mobile, shown on desktop */}
+      <div className="hidden md:block absolute left-8 lg:left-1/4 top-1/2 transform -translate-y-1/2 lg:-translate-x-12">
         <div className="relative group">
           <div className="w-16 h-28 sm:w-20 sm:h-32 md:w-24 md:h-36 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-900 rounded-xl shadow-2xl border border-slate-600 relative overflow-hidden">
             {/* Holographic effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 animate-hologram"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37]/10 via-transparent to-[#FF5349]/10 animate-hologram"></div>
             
             {/* Status LEDs */}
             <div className="absolute top-3 left-3 space-y-1">
@@ -105,7 +97,7 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="h-1 bg-slate-700 rounded-full overflow-hidden">
                   <div 
-                    className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-activity"
+                    className="h-full bg-gradient-to-r from-[#d4af37] to-[#FF5349] rounded-full animate-activity"
                     style={{ animationDelay: `${i * 0.2}s` }}
                   />
                 </div>
@@ -119,8 +111,8 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
         </div>
       </div>
 
-      {/* Data stream visualization */}
-      <div className="absolute left-1/4 right-1/4 top-1/2 transform -translate-y-1/2 h-px overflow-visible">
+      {/* Data stream visualization - hidden on mobile */}
+      <div className="hidden md:block absolute left-1/4 right-1/4 top-1/2 transform -translate-y-1/2 h-px overflow-visible">
         {[...Array(6)].map((_, i) => (
           <div 
             key={i}
@@ -128,7 +120,7 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
             style={{
               left: `${i * 15}%`,
               animationDelay: `${i * 0.4}s`,
-              background: `linear-gradient(45deg, ${i % 2 === 0 ? '#06b6d4, #3b82f6' : '#8b5cf6, #ec4899'})`
+              background: `linear-gradient(45deg, ${i % 2 === 0 ? '#d4af37, #FF5349' : '#ffffff, #d4af37'})`
             }}
           >
             <div className="absolute inset-0 bg-white/20 rounded-sm animate-pulse"></div>
@@ -136,12 +128,12 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
         ))}
       </div>
 
-      {/* Client visualization - responsive positioning */}
-      <div className="absolute right-4 sm:right-8 md:right-1/4 top-1/2 transform -translate-y-1/2 md:transform md:translate-x-1/2 md:-translate-y-1/2">
+      {/* Client visualization - hidden on mobile, shown on desktop */}
+      <div className="hidden md:block absolute right-8 lg:right-1/4 top-1/2 transform -translate-y-1/2 lg:translate-x-12">
         <div className="relative group">
           <div className="w-20 h-32 sm:w-24 sm:h-36 md:w-28 md:h-40 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 rounded-xl shadow-2xl border border-slate-600 relative overflow-hidden">
             {/* Glowing border effect */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-border-glow"></div>
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#d4af37]/20 via-[#FF5349]/20 to-[#ffffff]/20 animate-border-glow"></div>
             
             {/* Browser chrome */}
             <div className="absolute top-0 left-0 w-full h-5 bg-slate-700 rounded-t-xl flex items-center px-2 space-x-1 border-b border-slate-600">
@@ -152,20 +144,20 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
             
             {/* Screen content */}
             <div className="mt-5 h-full p-2 font-mono text-xs overflow-hidden relative">
-              {showData && jsonData ? (
-                <div className="text-emerald-400 leading-tight animate-type-in">
-                  <div className="text-cyan-400 mb-1">{'{'}</div>
-                  <div className="pl-2 text-purple-400">"developer": {'{'}</div>
-                  <div className="pl-4 text-emerald-400">"name": "{jsonData.developer.name}"</div>
-                  <div className="pl-4 text-emerald-400">"role": "{jsonData.developer.role}"</div>
-                  <div className="pl-2 text-purple-400">{'}'}</div>
-                  <div className="text-cyan-400">{'}'}</div>
-                </div>
-              ) : (
-                <div className="flex items-center justify-center h-full">
-                  <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-              )}
+                {showData && jsonData ? (
+                  <div className="text-white leading-tight animate-type-in font-mono">
+                    <div className="text-[#d4af37] mb-1">{'{'}</div>
+                    <div className="pl-2 text-[#FF5349]">"developer": {'{'}</div>
+                    <div className="pl-4 text-white">"name": "{jsonData.developer.name}"</div>
+                    <div className="pl-4 text-white">"role": "{jsonData.developer.role}"</div>
+                    <div className="pl-2 text-[#FF5349]">{'}'}</div>
+                    <div className="text-[#d4af37]">{'}'}</div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center h-full">
+                    <div className="w-8 h-8 border-2 border-[#d4af37] border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
             </div>
           </div>
           
@@ -176,63 +168,100 @@ const DeveloperLoadingScreen = ({ onLoaded }: { onLoaded: () => void }) => {
       </div>
 
       {/* Main status container - responsive */}
-      <div className="relative w-full max-w-sm mx-4 sm:max-w-md md:max-w-lg p-6 sm:p-8 bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl text-center mt-32 sm:mt-40 md:mt-48">
+      <div 
+        className="relative w-full max-w-sm mx-4 sm:max-w-md md:max-w-lg p-6 sm:p-8 bg-black/80 backdrop-blur-xl rounded-2xl border-2 transition-all duration-500 text-center"
+        style={{ 
+          borderColor: '#ff730030',
+          boxShadow: '0 0 30px rgba(255, 115, 0, 0.15), inset 0 0 15px rgba(255, 115, 0, 0.05)'
+        }}
+      >
+        {/* Holographic scanner effect overlay */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ff7300]/30 to-transparent animate-scan opacity-60"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_4px,6px_100%] pointer-events-none"></div>
+        </div>
+
         {/* Glowing orb */}
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-500 via-indigo-600 to-purple-700 rounded-2xl flex items-center justify-center shadow-2xl relative overflow-hidden group">
+            <div className="w-16 h-16 bg-gradient-to-br from-[#ffffff] via-[#d4af37] to-[#FF5349] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(255,115,0,0.4)] relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-white relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-500/30 rounded-2xl animate-pulse"></div>
+              <Cpu className="h-8 w-8 text-white relative z-10 animate-spin" style={{ animationDuration: '6s' }} />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#d4af37]/30 to-[#FF5349]/30 rounded-2xl animate-pulse"></div>
             </div>
             {/* Pulsing ring */}
-            <div className="absolute inset-0 rounded-2xl border-2 border-cyan-500/30 animate-ping"></div>
+            <div className="absolute inset-0 rounded-2xl border-2 border-[#ff7300]/40 animate-ping"></div>
           </div>
         </div>
         
         {/* Status text */}
-        <div className="text-base sm:text-lg font-mono text-slate-100 mb-8 h-6 sm:h-8 flex items-center justify-center min-h-[1.5rem] sm:min-h-[2rem]">
-          <span className="animate-fade-in">{status}</span>
+        <div className="text-sm sm:text-base font-mono text-slate-100 mb-6 h-6 sm:h-8 flex items-center justify-center min-h-[1.5rem] sm:min-h-[2rem]">
+          <span className="animate-fade-in text-[#d4af37] tracking-wider">&gt; {status}</span>
         </div>
         
         {/* Progress bar with glassmorphism */}
-        <div className="w-full h-3 bg-slate-800/50 backdrop-blur-sm rounded-full overflow-hidden mb-3 border border-slate-700/30 shadow-inner">
+        <div className="w-full h-3.5 bg-slate-900/90 backdrop-blur-sm rounded-full overflow-hidden mb-3 border border-white/5 shadow-inner">
           <div 
-            className="h-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-600 transition-all duration-500 ease-out relative rounded-full"
+            className="h-full bg-gradient-to-r from-[#ff7300] via-[#d4af37] to-[#FF5349] transition-all duration-300 ease-out relative rounded-full"
             style={{ width: `${progress}%` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer rounded-full"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/20 rounded-full"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-shimmer rounded-full"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/30 rounded-full"></div>
           </div>
         </div>
         
         {/* Progress indicators */}
-        <div className="flex justify-between text-xs font-mono text-slate-400">
-          <span className="bg-slate-800/50 px-2 py-1 rounded backdrop-blur-sm">0%</span>
-          <span className={`transition-all duration-300 px-2 py-1 rounded backdrop-blur-sm ${
-            progress > 50 ? 'text-cyan-400 bg-cyan-950/50 shadow-lg shadow-cyan-500/20' : 'bg-slate-800/50'
+        <div className="flex justify-between text-[10px] font-mono text-slate-400">
+          <span className="bg-slate-900/60 px-2 py-0.5 rounded border border-white/5">SYS_0%</span>
+          <span className={`transition-all duration-300 px-3 py-0.5 rounded font-bold border ${
+            progress > 50 
+              ? 'text-[#ff7300] bg-[#ff7300]/10 border-[#ff7300]/30 shadow-[0_0_10px_rgba(255,115,0,0.2)]' 
+              : 'bg-slate-900/60 border-white/5'
           }`}>
             {Math.round(progress)}%
           </span>
-          <span className="bg-slate-800/50 px-2 py-1 rounded backdrop-blur-sm">100%</span>
+          <span className="bg-slate-900/60 px-2 py-0.5 rounded border border-white/5">LAUNCH_100%</span>
         </div>
 
-        {/* Additional loading indicators */}
-        <div className="mt-6 flex justify-center space-x-1">
-          {[...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full animate-bounce"
-              style={{ animationDelay: `${i * 0.2}s` }}
-            />
-          ))}
+        {/* Scrolling technical logs */}
+        <div className="mt-6 p-3 bg-black/90 rounded-xl border border-white/10 font-mono text-[10px] text-emerald-400 text-left h-28 overflow-y-auto space-y-1 shadow-inner relative">
+          <div className="text-gray-500 mb-1 flex items-center justify-between border-b border-white/5 pb-1">
+            <span>[LOG_PIPE: active]</span>
+            <span className="animate-pulse text-[#ff7300]">●</span>
+          </div>
+          <div>&gt; [OK] VIVEK_OS core modules ready</div>
+          {progress > 15 && <div>&gt; [ESTABLISHED] Cloud services ping success</div>}
+          {progress > 35 && <div>&gt; [OK] Loaded portfolio.ts datasets</div>}
+          {progress > 55 && <div>&gt; [SUCCESS] Parsed work experience & certifications</div>}
+          {progress > 75 && <div>&gt; [OK] Compiled page routing maps</div>}
+          {progress > 90 && <div>&gt; [READY] Launching graphics pipelines...</div>}
+          <div className="text-[#ff7300] animate-pulse">&gt; {status}</div>
         </div>
       </div>
 
       {/* Enhanced animations and styles */}
-      <style jsx>{`
+      <style>{`
+        @keyframes scan {
+          0% { 
+            top: 0%; 
+            opacity: 1; 
+            box-shadow: 0 0 10px #ff7300;
+          }
+          50% { 
+            opacity: 1; 
+            box-shadow: 0 0 20px #ff7300, 0 0 40px #ff7300;
+          }
+          100% { 
+            top: 100%; 
+            opacity: 0; 
+            box-shadow: 0 0 10px #ff7300;
+          }
+        }
+        
+        .animate-scan {
+          animation: scan 3s ease-in-out infinite;
+        }
+
         @keyframes data-flow {
           0% { 
             transform: translateX(-100%) scale(0.8) rotate(0deg); 

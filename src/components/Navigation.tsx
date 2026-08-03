@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Home, User, Code, Award, Mail, FileText, Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home, command: './home.sh' },
@@ -12,22 +11,26 @@ const navItems = [
   { path: '/resume', label: 'Resume', icon: FileText, command: './resume.sh' },
 ];
 
-export default function Navigation() {
+interface NavigationProps {
+  activeSection: string;
+  onSectionClick: (path: string) => void;
+}
+
+export default function Navigation({ activeSection, onSectionClick }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
   return (
     <>
       {/* Mobile Menu Button */}
       <motion.button
-        className="fixed top-4 right-4 z-50 md:hidden bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-2"
+        className="fixed top-4 right-4 z-50 md:hidden bg-black/40 backdrop-blur-sm border border-[#d4af37]/40 rounded-lg p-2"
         onClick={() => setIsOpen(!isOpen)}
         whileTap={{ scale: 0.95 }}
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-[#00f7ff]" />
+          <X className="w-6 h-6 text-[#d4af37]" />
         ) : (
-          <Menu className="w-6 h-6 text-[#00f7ff]" />
+          <Menu className="w-6 h-6 text-[#d4af37]" />
         )}
       </motion.button>
 
@@ -36,15 +39,19 @@ export default function Navigation() {
         <div className="flex space-x-1">
           {navItems.map((item) => {
             const Icon = item.icon;
-            const isActive = location.pathname === item.path;
+            const isActive = activeSection === item.path;
 
             return (
-              <Link key={item.path} to={item.path}>
+              <button 
+                key={item.path} 
+                onClick={() => onSectionClick(item.path)}
+                className="focus:outline-none"
+              >
                 <motion.div
                   className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     isActive
-                      ? 'text-[#00f7ff] bg-[#00f7ff]/20'
-                      : 'text-gray-300 hover:text-[#00f7ff] hover:bg-white/5'
+                      ? 'text-[#d4af37] bg-[#d4af37]/20'
+                      : 'text-gray-300 hover:text-[#d4af37] hover:bg-white/5'
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -56,13 +63,13 @@ export default function Navigation() {
 
                   {isActive && (
                     <motion.div
-                      className="absolute inset-0 rounded-full border border-[#00f7ff]/60"
+                      className="absolute inset-0 rounded-full border border-[#d4af37]/60"
                       layoutId="activeTab"
                       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                     />
                   )}
                 </motion.div>
-              </Link>
+              </button>
             );
           })}
         </div>
@@ -80,19 +87,22 @@ export default function Navigation() {
         <div className="flex flex-col items-center justify-center h-full space-y-6">
           {navItems.map((item, index) => {
             const Icon = item.icon;
-            const isActive = location.pathname === item.path;
+            const isActive = activeSection === item.path;
 
             return (
-              <Link
+              <button
                 key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  onSectionClick(item.path);
+                }}
+                className="focus:outline-none w-full max-w-[200px]"
               >
                 <motion.div
                   className={`flex items-center space-x-4 px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 ${
                     isActive
-                      ? 'text-[#00f7ff] bg-[#00f7ff]/20 border border-[#00f7ff]/40'
-                      : 'text-gray-300 hover:text-[#00f7ff] hover:bg-white/5'
+                      ? 'text-[#d4af37] bg-[#d4af37]/20 border border-[#d4af37]/40'
+                      : 'text-gray-300 hover:text-[#d4af37] hover:bg-white/5'
                   }`}
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -50 }}
@@ -102,7 +112,7 @@ export default function Navigation() {
                   <Icon className="w-6 h-6" />
                   <span>{item.label}</span>
                 </motion.div>
-              </Link>
+              </button>
             );
           })}
         </div>

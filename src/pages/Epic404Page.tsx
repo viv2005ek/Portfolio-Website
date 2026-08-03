@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Terminal } from 'lucide-react';
 
 const Epic404Page = () => {
   const [glitchText, setGlitchText] = useState('404');
@@ -88,17 +90,17 @@ const Epic404Page = () => {
         <div className="mb-8 relative">
           <div className="text-8xl sm:text-9xl md:text-[12rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 font-mono relative">
             {glitchText}
-            <div className="absolute inset-0 text-8xl sm:text-9xl md:text-[12rem] font-black text-cyan-400/20 animate-glitch-1">
+            <div className="absolute inset-0 text-8xl sm:text-9xl md:text-[12rem] font-black text-[#d4af37]/20 animate-glitch-1">
               404
             </div>
-            <div className="absolute inset-0 text-8xl sm:text-9xl md:text-[12rem] font-black text-red-400/20 animate-glitch-2">
+            <div className="absolute inset-0 text-8xl sm:text-9xl md:text-[12rem] font-black text-[#FF5349]/20 animate-glitch-2">
               404
             </div>
           </div>
           
           {/* Scanning line effect */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-scan opacity-70"></div>
+            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent animate-scan opacity-70"></div>
           </div>
         </div>
 
@@ -123,8 +125,7 @@ const Epic404Page = () => {
               <span className="ml-4 text-slate-300 text-sm font-mono">error_log.terminal</span>
             </div>
             
-            {/* Terminal content */}
-            <div className="p-4 h-48 font-mono text-sm overflow-hidden">
+            <div className="p-4 h-48 font-mono text-xs md:text-sm overflow-hidden">
               {terminalLines.map((line, index) => (
                 <div
                   key={index}
@@ -139,14 +140,41 @@ const Epic404Page = () => {
               ))}
               {currentLineIndex < terminalSequence.length && (
                 <div className="text-emerald-400 mb-1">
-                  {showCursor && <span className="text-cyan-400">█</span>}
+                  {showCursor && <span className="text-[#FF5349]">█</span>}
                 </div>
               )}
             </div>
           </div>
         </div>
 
-       
+        {/* Navigation Action */}
+        <motion.div 
+          className="mb-8 mt-6 animate-fade-in-up flex justify-center"
+          style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <button
+            onClick={() => window.location.href = '/'}
+            className="px-8 py-3 rounded-full font-space-grotesk font-semibold text-sm border-2 transition-all duration-300 relative group overflow-hidden"
+            style={{ 
+              borderColor: '#ff7300', 
+              color: '#ff7300',
+              boxShadow: '0 0 15px rgba(255, 115, 0, 0.2)'
+            }}
+          >
+            {/* Hover background slide */}
+            <div 
+              className="absolute inset-0 bg-gradient-to-r from-[#ff7300] to-[#FF5349] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+            
+            {/* Text and Icon */}
+            <span className="relative z-10 flex items-center justify-center gap-2 group-hover:text-black transition-colors duration-300 font-mono text-xs">
+              <Terminal className="w-4 h-4" />
+              RETURN_TO_SYSTEM
+            </span>
+          </button>
+        </motion.div>
 
         {/* Status indicators */}
         <div className="mt-12 flex justify-center space-x-8 text-sm font-mono">
@@ -158,8 +186,8 @@ const Epic404Page = () => {
             <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse delay-100"></div>
             <span>NOT_FOUND</span>
           </div>
-          <div className="flex items-center space-x-2 text-cyan-400">
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse delay-200"></div>
+          <div className="flex items-center space-x-2 text-[#d4af37]">
+            <div className="w-2 h-2 bg-[#d4af37] rounded-full animate-pulse delay-200"></div>
             <span>SYSTEM_OK</span>
           </div>
         </div>
@@ -167,8 +195,8 @@ const Epic404Page = () => {
 
       {/* Holographic UI elements */}
       <div className="absolute top-8 left-8 opacity-60">
-        <div className="w-32 h-24 border border-cyan-500/30 rounded-lg bg-cyan-500/5 backdrop-blur-sm animate-hologram">
-          <div className="p-3 font-mono text-xs text-cyan-400">
+        <div className="w-32 h-24 border border-[#d4af37]/30 rounded-lg bg-[#d4af37]/5 backdrop-blur-sm animate-hologram">
+          <div className="p-3 font-mono text-xs text-[#d4af37]">
             <div>ERR_CODE: 404</div>
             <div>TIMESTAMP: {new Date().toLocaleTimeString()}</div>
             <div>STATUS: ACTIVE</div>
@@ -245,16 +273,16 @@ const Epic404Page = () => {
           0% { 
             top: 0%; 
             opacity: 1; 
-            box-shadow: 0 0 20px #00f7ff;
+            box-shadow: 0 0 20px #d4af37;
           }
           50% { 
             opacity: 1; 
-            box-shadow: 0 0 30px #00f7ff, 0 0 60px #00f7ff;
+            box-shadow: 0 0 30px #d4af37, 0 0 60px #d4af37;
           }
           100% { 
             top: 100%; 
             opacity: 0; 
-            box-shadow: 0 0 20px #00f7ff;
+            box-shadow: 0 0 20px #d4af37;
           }
         }
         
@@ -414,15 +442,15 @@ const Epic404Page = () => {
       ))}
 
       {/* Holographic UI frame */}
-      <div className="absolute inset-8 border border-cyan-500/20 rounded-3xl pointer-events-none animate-hologram">
-        <div className="absolute top-4 left-4 w-16 h-16 border-l-2 border-t-2 border-cyan-500/40 rounded-tl-lg"></div>
-        <div className="absolute top-4 right-4 w-16 h-16 border-r-2 border-t-2 border-cyan-500/40 rounded-tr-lg"></div>
-        <div className="absolute bottom-4 left-4 w-16 h-16 border-l-2 border-b-2 border-cyan-500/40 rounded-bl-lg"></div>
-        <div className="absolute bottom-4 right-4 w-16 h-16 border-r-2 border-b-2 border-cyan-500/40 rounded-br-lg"></div>
+      <div className="absolute inset-8 border border-[#d4af37]/20 rounded-3xl pointer-events-none animate-hologram">
+        <div className="absolute top-4 left-4 w-16 h-16 border-l-2 border-t-2 border-[#d4af37]/40 rounded-tl-lg"></div>
+        <div className="absolute top-4 right-4 w-16 h-16 border-r-2 border-t-2 border-[#d4af37]/40 rounded-tr-lg"></div>
+        <div className="absolute bottom-4 left-4 w-16 h-16 border-l-2 border-b-2 border-[#d4af37]/40 rounded-bl-lg"></div>
+        <div className="absolute bottom-4 right-4 w-16 h-16 border-r-2 border-b-2 border-[#d4af37]/40 rounded-br-lg"></div>
       </div>
 
       {/* Cyber circuit lines */}
-      <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent animate-pulse"></div>
+      <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#d4af37]/50 to-transparent animate-pulse"></div>
       <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent animate-pulse delay-1000"></div>
       <div className="absolute left-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-pink-500/50 to-transparent animate-pulse delay-500"></div>
       <div className="absolute right-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent animate-pulse delay-1500"></div>

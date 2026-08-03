@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Play, Code, ArrowRight, Sparkles, ChevronDown } from 'lucide-react';
+import { ExternalLink, Github, Play, Code, ArrowRight, Sparkles, ChevronDown, ArrowUpRight, Twitter, FileText, Tv, Link } from 'lucide-react';
 import TerminalCommand from '../components/TerminalCommand';
 import { projects, stats, personalInfo } from '../data/portfolio';
+import ScrambledText from '../components/ScrambledText';
+import { SiDevdotto } from "react-icons/si";
 
 export default function Projects() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -18,15 +20,16 @@ export default function Projects() {
         {/* Header */}
         <motion.div
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.4 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#00f7ff] to-[#0fff50] bg-clip-text text-transparent">
-            Projects
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#ffffff] via-[#d4af37] to-[#FF5349] bg-clip-text text-transparent">
+            <ScrambledText text="Projects" />
           </h1>
           
-          <div className="bg-black/40 backdrop-blur-sm border border-[#00f7ff]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+          <div className="bg-black/40 backdrop-blur-sm border border-[#d4af37]/40 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -38,9 +41,14 @@ export default function Projects() {
 
             <TerminalCommand 
               command="ls ~/projects --stats" 
-              output={`${stats.repositories} repositories | ${stats.projects} full-stack projects
-Development tools and open-source contributions
-Building the future, one commit at a time`}
+              output={`[PROJECTS_METRIC_REPORT]
+Total Source Repositories: ${stats.repositories} | Full-Stack Applications: ${stats.projects}
+Key Deployments:
+- IndoMate (SOS Application): Pre-incubated at AIC-MUJ, 1000+ test users
+- AI SQL Agent: fastapi-mcp server with schema lineage automation
+- CFD DICOM: WPF rendering pipeline processing 500MB+ medical visual frames
+- WebGPU Render Engine: Parallel compute shader pipeline via WebGPU
+Build Status: All builds passing [OK]`}
               delay={500}
             />
           </div>
@@ -48,12 +56,12 @@ Building the future, one commit at a time`}
 
         {/* Featured Projects */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-[#00f7ff] mb-6 flex items-center">
+          <h2 className="text-2xl font-bold text-[#d4af37] mb-6 flex items-center">
             <Code className="w-6 h-6 mr-2" />
             Featured Projects
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
             {featuredProjects
               .slice(0, showAllFeatured ? undefined : 3)
               .map((project, index) => (
@@ -80,9 +88,9 @@ Building the future, one commit at a time`}
 
         {/* Other Projects */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-[#ff00f7] mb-6">Other Notable Projects</h2>
+          <h2 className="text-2xl font-bold text-[#FF5349] mb-6">Other Notable Projects</h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
             {otherProjects
               .slice(0, showAllOther ? undefined : 3)
               .map((project, index) => (
@@ -109,46 +117,46 @@ Building the future, one commit at a time`}
 
         {/* GitHub Portfolio Card */}
         <motion.div
-          className="max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.05 }}
+          whileHover={{ y: -8 }}
+          className="lg:col-span-3 h-full max-w-2xl mx-auto"
         >
           <div 
-            className="group relative bg-gradient-to-br from-black to-gray-900 rounded-xl overflow-hidden border border-[#0fff50]/30 hover:border-[#0fff50] transition-all duration-500 p-6 cursor-pointer"
             onClick={() => window.open(personalInfo.github, '_blank')}
             onMouseEnter={() => setHoveredCard('github')}
             onMouseLeave={() => setHoveredCard(null)}
+            className="group relative bg-gradient-to-br from-black to-gray-900 rounded-xl overflow-hidden border border-[#FF5349]/30 hover:border-[#FF5349] transition-all duration-500 p-6 cursor-pointer"
           >
-            {/* Glow effect */}
-            <div className={`absolute inset-0 bg-gradient-to-br from-[#0fff50]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${hoveredCard === 'github' ? 'opacity-100' : ''}`}></div>
+            <div className={`absolute inset-0 bg-gradient-to-br from-[#FF5349]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${hoveredCard === 'github' ? 'opacity-100' : ''}`}></div>
             
-            {/* Content */}
-            <div className="relative z-10">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold text-white">Complete GitHub Portfolio</h3>
-                <Github className="w-6 h-6 text-[#0fff50]" />
-              </div>
-              
-              <p className="text-gray-300 mb-6">
-                Explore all {stats.repositories} repositories including development tools, open-source contributions, and experimental projects.
-              </p>
-              
-              <div className="mt-4 p-4 bg-black/20 rounded-lg border border-white/10">
-                <div className="text-sm text-gray-300 font-mono">
-                  <div className="text-[#0fff50]">$ git stats --summary</div>
-                  <div className="mt-2 text-gray-400">
-                    {stats.repositories} repositories<br/>
-                    {stats.projects} full-stack projects<br/>
-                    Multiple programming languages<br/>
-                    Active open-source contributor
+            <div className="relative z-10 flex flex-col justify-between h-full min-h-[220px]">
+              <div className="flex items-start justify-between">
+                <div>
+                  <div className="flex items-center space-x-3 mb-2">
+                    <Github className="w-6 h-6 text-[#FF5349]" />
+                    <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-colors">
+                      <ScrambledText text="GitHub Profile" />
+                    </h3>
                   </div>
+                  <p className="text-gray-400 text-sm max-w-xl">
+                    Explore all my repositories, open source contributions, and commit activity history.
+                  </p>
                 </div>
               </div>
-              
-              <div className="flex items-center mt-6 text-[#0fff50] group-hover:translate-x-1 transition-transform duration-300">
-                <span className="text-sm mr-2">View GitHub</span>
-                <ArrowRight className="w-4 h-4" />
+
+              <div className="font-mono text-sm space-y-1 my-4">
+                <div className="text-[#FF5349]">$ git stats --summary</div>
+                <div className="text-gray-400">Total Repositories: {stats.repositories}</div>
+                <div className="text-gray-400">Contributions: 350+ this year</div>
+                <div className="text-gray-400">Status: Active Developer [ONLINE]</div>
+              </div>
+
+              <div className="flex items-center mt-6 text-[#FF5349] group-hover:translate-x-1 transition-transform duration-300">
+                <span className="text-sm font-semibold mr-2">Explore GitHub</span>
+                <ArrowUpRight className="w-4 h-4" />
               </div>
             </div>
           </div>
@@ -159,18 +167,19 @@ Building the future, one commit at a time`}
 }
 
 const ViewMoreCard = ({ count, onClick, isFeatured }) => {
-  const glowColor = isFeatured ? '#00f7ff' : '#ff00f7';
+  const glowColor = isFeatured ? '#d4af37' : '#FF5349';
   
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.05 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="h-full"
+      className="h-fit"
     >
       <div 
-        className="group relative bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl overflow-hidden border-2 border-dashed transition-all duration-500 p-6 h-full cursor-pointer border-opacity-40 hover:border-opacity-80"
+        className="group relative bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl overflow-hidden border-2 border-dashed transition-all duration-500 p-6 h-fit cursor-pointer border-opacity-40 hover:border-opacity-80"
         style={{ 
           borderColor: glowColor,
           boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
@@ -253,14 +262,25 @@ const ViewMoreCard = ({ count, onClick, isFeatured }) => {
 const ProjectCard = ({ project, index, hoveredCard, setHoveredCard, isFeatured }) => {
   const cardId = `project-${index}`;
   const glowColors = isFeatured 
-    ? ['#00f7ff', '#ff00f7', '#0fff50'] 
-    : ['#ff00f7', '#00f7ff', '#0fff50'];
+    ? ['#ffffff', '#d4af37', '#FF5349'] 
+    : ['#FF5349', '#ffffff', '#d4af37'];
   
   const glowColor = glowColors[index % 3];
   
+  const [isDescExpanded, setIsDescExpanded] = useState(false);
+  const [isTagsExpanded, setIsTagsExpanded] = useState(false);
+  
   // Determine which link to use as primary
   const getPrimaryLink = () => {
-    return project.links.website || project.links.demo || project.links.github || '#';
+    if (project.links.website) return project.links.website;
+    if (project.links.demo) return project.links.demo;
+    if (project.links.X) return project.links.X;
+    if (project.links.github) return project.links.github;
+    if (project.links.dev) return project.links.dev;
+    if (project.links.post) return project.links.post;
+    if (project.links.presentation) return project.links.presentation;
+    if (project.links.customs && project.links.customs.length > 0) return project.links.customs[0].url;
+    return '#';
   };
   
   const handleCardClick = () => {
@@ -271,18 +291,28 @@ const ProjectCard = ({ project, index, hoveredCard, setHoveredCard, isFeatured }
   };
   
   // Check if any links are available
-  const hasLinks = project.links.website || project.links.demo || project.links.github;
+  const hasLinks = !!(
+    project.links.website || 
+    project.links.demo || 
+    project.links.X || 
+    project.links.github || 
+    project.links.dev || 
+    project.links.post || 
+    project.links.presentation || 
+    (project.links.customs && project.links.customs.length > 0)
+  );
   
   return (
     <motion.div
-      initial={{ opacity: 0, y: isFeatured ? 30 : 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * (isFeatured ? 0.4 : 0.3) }}
+      initial={{ opacity: 0, y: isFeatured ? 20 : 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.05 }}
+      transition={{ delay: index * 0.03 + 0.05 }}
       whileHover={{ y: -8 }}
-      className="h-full"
+      className="h-fit"
     >
       <div 
-        className={`group relative bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl overflow-hidden border-2 transition-all duration-500 p-6 h-full cursor-pointer
+        className={`group relative bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl overflow-hidden border-2 transition-all duration-500 p-6 h-fit cursor-pointer
           ${hoveredCard === cardId ? 'border-opacity-80' : 'border-opacity-30'}`}
         style={{ 
           borderColor: glowColor,
@@ -381,15 +411,29 @@ const ProjectCard = ({ project, index, hoveredCard, setHoveredCard, isFeatured }
               initial={{ opacity: 0.8 }}
               whileHover={{ opacity: 1 }}
             >
-              {project.description}
+              {project.description.length > 150 && !isDescExpanded 
+                ? `${project.description.slice(0, 150)}...` 
+                : project.description}
+              {project.description.length > 150 && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsDescExpanded(!isDescExpanded);
+                  }}
+                  className="font-semibold hover:underline ml-1 inline-block text-xs"
+                  style={{ color: glowColor }}
+                >
+                  {isDescExpanded ? 'Show Less' : 'Show More'}
+                </button>
+              )}
             </motion.p>
             
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {project.tech.map((tech, techIndex) => (
+              {(isTagsExpanded ? project.tech : project.tech.slice(0, 4)).map((tech, techIndex) => (
                 <motion.span
                   key={techIndex}
-                  className="px-3 py-1 text-xs font-medium bg-black/50 border rounded-full text-gray-300 group-hover:text-white transition-colors"
+                  className="font-sora px-3 py-1 text-xs font-medium bg-black/50 border rounded-full text-gray-300 group-hover:text-white transition-colors"
                   style={{ borderColor: `${glowColor}40` }}
                   whileHover={{ 
                     scale: 1.05, 
@@ -402,12 +446,24 @@ const ProjectCard = ({ project, index, hoveredCard, setHoveredCard, isFeatured }
                   {tech}
                 </motion.span>
               ))}
+              {project.tech.length > 4 && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsTagsExpanded(!isTagsExpanded);
+                  }}
+                  className="font-sora px-3 py-1 text-xs font-semibold bg-white/10 hover:bg-white/20 border rounded-full transition-all hover:scale-105"
+                  style={{ color: glowColor, borderColor: `${glowColor}40` }}
+                >
+                  {isTagsExpanded ? 'Show Less' : `+${project.tech.length - 4} More`}
+                </button>
+              )}
             </div>
           </div>
           
           {/* Links with enhanced animation */}
           <motion.div 
-            className="flex space-x-3 pt-4 border-t border-white/10 group-hover:border-white/20 transition-colors"
+            className="flex flex-wrap gap-x-3 gap-y-2 pt-4 border-t border-white/10 group-hover:border-white/20 transition-colors"
             initial={{ opacity: 0.7 }}
             whileHover={{ opacity: 1 }}
           >
@@ -415,62 +471,158 @@ const ProjectCard = ({ project, index, hoveredCard, setHoveredCard, isFeatured }
               <motion.a
                 href={project.links.website}
                 onClick={(e) => e.stopPropagation()}
-                className="flex items-center space-x-1 text-[#00f7ff] hover:text-[#00f7ff] transition-colors group/link"
+                className="flex items-center space-x-1 text-[#d4af37] hover:text-[#d4af37] transition-colors group/link"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
                 <motion.div
-                  className="p-1 rounded-md bg-[#00f7ff]/10 group-hover/link:bg-[#00f7ff]/20 transition-colors"
+                  className="p-1 rounded-md bg-[#d4af37]/10 group-hover/link:bg-[#d4af37]/20 transition-colors"
                   whileHover={{ scale: 1.1 }}
                 >
                   <ExternalLink className="w-4 h-4" />
                 </motion.div>
-                <span className="text-sm font-medium">Website</span>
+                <span className="font-space-grotesk text-sm font-medium">Website</span>
               </motion.a>
             )}
             {project.links.demo && (
               <motion.a
                 href={project.links.demo}
                 onClick={(e) => e.stopPropagation()}
-                className="flex items-center space-x-1 text-[#0fff50] hover:text-[#0fff50] transition-colors group/link"
+                className="flex items-center space-x-1 text-[#FF5349] hover:text-[#FF5349] transition-colors group/link"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
                 <motion.div
-                  className="p-1 rounded-md bg-[#0fff50]/10 group-hover/link:bg-[#0fff50]/20 transition-colors"
+                  className="p-1 rounded-md bg-[#FF5349]/10 group-hover/link:bg-[#FF5349]/20 transition-colors"
                   whileHover={{ scale: 1.1 }}
                 >
                   <Play className="w-4 h-4" />
                 </motion.div>
-                <span className="text-sm font-medium">Demo</span>
+                <span className="font-space-grotesk text-sm font-medium">Demo</span>
+              </motion.a>
+            )}
+            {project.links.X && (
+              <motion.a
+                href={project.links.X}
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center space-x-1 text-[#00d4ff] hover:text-[#00d4ff] transition-colors group/link"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+              >
+                <motion.div
+                  className="p-1 rounded-md bg-[#00d4ff]/10 group-hover/link:bg-[#00d4ff]/20 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Twitter className="w-4 h-4" />
+                </motion.div>
+                <span className="font-space-grotesk text-sm font-medium">X</span>
               </motion.a>
             )}
             {project.links.github && (
               <motion.a
                 href={project.links.github}
                 onClick={(e) => e.stopPropagation()}
-                className="flex items-center space-x-1 text-[#ff00f7] hover:text-[#ff00f7] transition-colors group/link"
+                className="flex items-center space-x-1 text-[#ffffff] hover:text-[#ffffff] transition-colors group/link"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
                 <motion.div
-                  className="p-1 rounded-md bg-[#ff00f7]/10 group-hover/link:bg-[#ff00f7]/20 transition-colors"
+                  className="p-1 rounded-md bg-[#ffffff]/10 group-hover/link:bg-[#ffffff]/20 transition-colors"
                   whileHover={{ scale: 1.1 }}
                 >
                   <Github className="w-4 h-4" />
                 </motion.div>
-                <span className="text-sm font-medium">Code</span>
+                <span className="font-space-grotesk text-sm font-medium">Code</span>
               </motion.a>
             )}
+            {project.links.dev && (
+              <motion.a
+                href={project.links.dev}
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center space-x-1 text-[#a855f7] hover:text-[#a855f7] transition-colors group/link"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+              >
+                <motion.div
+                  className="p-1 rounded-md bg-[#a855f7]/10 group-hover/link:bg-[#a855f7]/20 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <SiDevdotto className="w-4 h-4" />
+                </motion.div>
+                <span className="font-space-grotesk text-sm font-medium">Dev</span>
+              </motion.a>
+            )}
+            {project.links.post && (
+              <motion.a
+                href={project.links.post}
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center space-x-1 text-[#00a8ff] hover:text-[#00a8ff] transition-colors group/link"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+              >
+                <motion.div
+                  className="p-1 rounded-md bg-[#00a8ff]/10 group-hover/link:bg-[#00a8ff]/20 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <FileText className="w-4 h-4" />
+                </motion.div>
+                <span className="font-space-grotesk text-sm font-medium">Post</span>
+              </motion.a>
+            )}
+            {project.links.presentation && (
+              <motion.a
+                href={project.links.presentation}
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center space-x-1 text-[#10b981] hover:text-[#10b981] transition-colors group/link"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+              >
+                <motion.div
+                  className="p-1 rounded-md bg-[#10b981]/10 group-hover/link:bg-[#10b981]/20 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Tv className="w-4 h-4" />
+                </motion.div>
+                <span className="font-space-grotesk text-sm font-medium">Presentation</span>
+              </motion.a>
+            )}
+            {project.links.customs && project.links.customs.map((custom, customIndex) => (
+              <motion.a
+                key={customIndex}
+                href={custom.url}
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center space-x-1 text-[#6366f1] hover:text-[#6366f1] transition-colors group/link"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+              >
+                <motion.div
+                  className="p-1 rounded-md bg-[#6366f1]/10 group-hover/link:bg-[#6366f1]/20 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Link className="w-4 h-4" />
+                </motion.div>
+                <span className="font-space-grotesk text-sm font-medium">{custom.name}</span>
+              </motion.a>
+            ))}
             
             {!hasLinks && (
-              <div className="flex items-center text-gray-500 text-sm">
+              <div className="flex items-center text-gray-500 text-sm font-space-grotesk">
                 <Sparkles className="w-4 h-4 mr-1" />
                 Coming soon
               </div>
