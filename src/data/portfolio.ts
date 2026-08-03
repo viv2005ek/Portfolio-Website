@@ -472,7 +472,7 @@ export const skills = {
     { name: "RAG Systems", level: 90 },
     { name: "LangGraph", level: 85 },
     { name: "MCP (Model Context Protocol)", level: 88 },
-    { name: "LangChain", level: 90 },
+    { name: "LangChain", level: 80 },
     { name: "Google AI Studio / Gemini", level: 90 },
     { name: "Pinecone (Vector DB)", level: 88 },
     { name: "Vector Databases", level: 90 },
