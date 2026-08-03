@@ -109,7 +109,7 @@ Current Focus: Building scalable backend architectures & intelligent agents."
                   {/* View Transcripts Button */}
                   <div className="mt-6">
                     <a
-                      href="https://drive.google.com/file/d/1JlMZRyTEPTzspPl5ULSLkA5BTRKOVp1s/view"
+                      href="https://drive.google.com/file/d/1taMAvdZtzStj0ePYarRr47UdZKqYTTi5/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-transparent text-white border-2 border-[#d4af37] font-medium rounded-lg hover:from-[#d4af37] hover:to-[#FF5349] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#d4af37]/20"
