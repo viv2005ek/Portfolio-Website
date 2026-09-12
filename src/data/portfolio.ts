@@ -284,6 +284,25 @@ export const projects = [
 
     },
     featured: false
+  },  {
+    title: "Northstar Portfolio",
+    subtitle: "Institutional Multi-Tenant Portfolio Analytics Engine",
+    description: "A full-stack, institutional-grade investment portfolio telemetry platform featuring strict multi-tenant Row-Level Security (RLS), atomic CSV dataset validation with error rollback, period return analytics, asset allocation spectrum meters, and a modern terminal UI design system built with custom Framer Motion animations.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Docker",
+      "TailwindCSS",
+      "Vite"
+    ],
+    links: {
+      demo: "https://www.youtube.com/watch?v=xgGmRU1oPXU",
+      github: "https://github.com/viv2005ek/NorthStar-Portfolio-Telemetry-System"
+    },
+    featured: false
   },
   {
     title: "Nodely",
