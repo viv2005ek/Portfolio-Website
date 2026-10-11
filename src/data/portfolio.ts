@@ -323,6 +323,27 @@ export const projects = [
       github: "https://github.com/viv2005ek/Nodely---Visual-workflows-no-code-required"
     },
     featured: false
+  },  {
+    title: "BBC News IR System",
+    subtitle: " Hybrid Information Retrieval & Semantic Intelligence Pipeline ",
+    description: "An advanced Information Retrieval engine combining lexical search (TF-IDF, BM25) with neural dense embeddings (Sentence Transformers) via Reciprocal Rank Fusion (RRF). Features interactive 3D semantic vector projection via PCA, WordNet-powered query expansion, automated query-focused extractive summarization (Featured Snippets), live news classification with dynamic index ingestion, and comprehensive evaluation with real-time Precision@10, Recall, MAP, and nDCG metrics.",
+    tech: [
+      "Python",
+      "Streamlit",
+      "Sentence Transformers",
+      "Rank-BM25",
+      "Scikit-learn",
+      "NLTK",
+      "Plotly 3D",
+      "tf-idf",
+      "Information Retrieval"
+    ],
+    links: {
+      website: "https://vivek-bbc-news-retrieval.streamlit.app/",
+      demo: "https://www.youtube.com/watch?v=CIP9QjaomTc",
+      github: "https://github.com/viv2005ek/BBC_News_Retrieval"
+    },
+    featured: false
   },
   {
     title: "India Health Intelligence Hub",
